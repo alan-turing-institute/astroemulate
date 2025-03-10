@@ -2,6 +2,8 @@
 import logo from "../assets/autoemulate_logo.png";
 import heart from "../assets/heart.png";
 import background from "../assets/background.svg";
+import quantum from "../assets/quantum.gif";
+import engine from "../assets/engine.jpg";
 import "../styles/global.css";
 ---
 
@@ -34,12 +36,12 @@ import "../styles/global.css";
 					<b>Introducing <i>AutoEmulate</i></b><br />
 					<i>AutoEmulate</i> is a Python library that makes it easy to
 					create accurate and efficient emulators for complex simulations.
-					<br>
+					<br />
 					Automatically fit and compare various emulators, ranging from
 					simple models like Radial Basis Functions and Second Order Polynomials
 					to more complex models like Support Vector Machines, Gaussian
 					Processes and Conditional Neural Processes.
-					<br>
+					<br />
 					Under the hood, the package runs a complete machine learning
 					pipeline to compare and optimise a wide range of models, and
 					provides functions for downstream tasks like prediction, sensitivity
@@ -49,23 +51,39 @@ import "../styles/global.css";
 			<div class="panel">
 				<p class="left-text">
 					<b>Why emulators?</b><br />
-					For complex systems research, the computational cost of simulation poses
-					a significant bottleneck.
-					<br>
-					Simulation models and the tasks required of them are becoming increasingly complex.
-					<br>
+					For complex systems research, the computational cost of simulation
+					poses a significant bottleneck.
+					<br />
+					Simulation models and the tasks required of them are becoming
+					increasingly complex.
+					<br />
 					These models can take hours, or even days to run.
-					<br>
-					Emulation is a technique that can create a fast, accurate approximation of a simulation model.
-					<br>
-					Emulation is domain agnostic and can be applied to any simulation model.
+					<br />
+					Emulation is a technique that can create a fast, accurate approximation
+					of a simulation model.
+					<br />
+					Emulation is domain agnostic and can be applied to any simulation
+					model.
 				</p>
 				<img
 					style="text-align: right;"
-					width="35%"
+					width="10%"
 					src={heart.src}
 					alt="Heart Image"
-				/><br />
+				/>
+				<img
+					style="text-align: right;"
+					width="10%"
+					src={quantum.src}
+					alt="Ab Initio Quantum simulations Image"
+				/>
+				<img
+					style="text-align: right;"
+					width="10%"
+					src={engine.src}
+					alt="Air flow in a single stage of an aero-engine Image"
+				/>
+				<br />
 			</div>
 		</div>
 
