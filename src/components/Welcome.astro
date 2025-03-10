@@ -16,6 +16,7 @@ import { Code } from "astro:components";
     <main>
         <nav class="navbar" id="navbar">
             <img src={logo.src} width="100" alt="AutoEmulate Logo" />
+            <sub class="navbar-text"><b>utoEmulate</b></sub>
         </nav>
         <div class="intro">
             <h1>Accelerating large-scale simulations with AI.</h1>
@@ -158,12 +159,21 @@ import { Code } from "astro:components";
                     width: 100%;
                     z-index: 1000;
                     display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 20px;
+                    background-color: rgba(255, 255, 255, 0.8);
                     transition: top 0.3s;
-                    background-color: rgba(235, 114, 138, 0.5);
                 }
 
                 .navbar.hidden {
                     top: -100px;
+                }
+
+                .navbar-text {
+                    position: absolute;
+                    bottom: 40%;
+                    left: 105px;
                 }
 
                 .intro {
