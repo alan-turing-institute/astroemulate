@@ -15,17 +15,26 @@
 }
 
 main {
-    height: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
-#hero {
+.hero {
     display: flex;
     align-items: start;
     flex-direction: column;
     justify-content: center;
     padding: 16px;
+}
+
+.intro {
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    width: 100%;
 }
 
 .panel {
@@ -39,13 +48,10 @@ h1 {
 }
 
 #links {
-    display: flex;
     gap: 16px;
 }
 
 #links a {
-    display: flex;
-    align-items: center;
     padding: 10px 12px;
     color: #111827;
     text-decoration: none;

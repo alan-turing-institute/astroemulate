@@ -8,10 +8,8 @@ import "../styles/global.css";
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={logo.src} width="300" alt="Astro Homepage" /></a
-			>
+		<img src={logo.src} width="300" alt="AutoEmulate Logo" />
+		<div class="intro">
 			<h1>Accelerating large-scale simulations with AI.</h1>
 			<h2>Replace complex simulations with fast, accurate emulators.</h2>
 			<section id="links">
@@ -21,9 +19,9 @@ import "../styles/global.css";
 					>Read our docs</a
 				>
 			</section>
-			<div
-				class="panel"
-			>
+		</div>
+		<div class="hero">
+			<div class="panel">
 				<p class="left-text">
 					<b>What are we trying to solve?</b><br />
 					For complex systems, the computational cost of simulation poses
@@ -37,9 +35,7 @@ import "../styles/global.css";
 					alt="Heart Image"
 				/><br />
 			</div>
-			<div
-				class="panel"
-			>
+			<div class="panel">
 				<img
 					style="text-align: left;"
 					width="35%"
@@ -55,8 +51,8 @@ import "../styles/global.css";
 					and Conditional Neural Processes.
 				</p><br /><br />
 			</div>
-		</section>
-	</main>
+		</div>
 
-	<style></style>
+		<style></style>
+	</main>
 </div>
