@@ -68,24 +68,37 @@ import "../styles/global.css";
 					Emulation is domain agnostic and can be applied to any simulation
 					model.
 				</p>
-				<img
-					style="text-align: right;"
-					width="10%"
-					src={heart.src}
-					alt="Heart Image"
-				/>
-				<img
-					style="text-align: right;"
-					width="10%"
-					src={quantum.src}
-					alt="Ab Initio Quantum simulations Image"
-				/>
-				<img
-					style="text-align: right;"
-					width="10%"
-					src={engine.src}
-					alt="Air flow in a single stage of an aero-engine Image"
-				/>
+				<div style="flex-direction: row;">
+					<div class="image-footer">
+						<img
+							style="text-align: right;"
+							width="10%"
+							src={heart.src}
+							alt="Heart Image"
+						/>
+						<footer>Cardiovascular simulations</footer>
+					</div>
+					<div class="image-footer">
+						<img
+							style="text-align: right;"
+							width="10%"
+							src={quantum.src}
+							alt="Ab Initio Quantum simulations Image"
+						/>
+						<footer>Ab Initio Quantum simulations for materials</footer>
+					</div>
+					<div class="image-footer">
+						<img
+							style="text-align: right;"
+							width="10%"
+							src={engine.src}
+							alt="Air flow in a single stage of an aero-engine Image"
+						/>
+						<footer>
+							Air flow in a single stage of an aero-engine
+						</footer>
+					</div>
+				</div>
 				<br />
 			</div>
 			<div class="panel benefits">
@@ -93,9 +106,8 @@ import "../styles/global.css";
 					<img src={code.src} alt="Low-Code Icon" width="50" />
 					<h3>Low code</h3>
 					<p>
-						Data-processing, model comparison,
-						cross-validation, hyperparameter search and more in few
-						lines of code.
+						Data-processing, model comparison, cross-validation,
+						hyperparameter search and more in few lines of code.
 					</p>
 				</div>
 				<div class="benefit">
@@ -265,6 +277,21 @@ import "../styles/global.css";
 
 			p.right-text {
 				text-align: right;
+			}
+
+			.image-footer {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 10px;
+			}
+
+			.image-footer img {
+				margin-bottom: 5px;
+			}
+
+			.image-footer footer {
+				text-align: center;
 			}
 
 			code {
