@@ -28,6 +28,11 @@ main {
     padding: 16px;
 }
 
+.panel {
+    display: flex;
+    align-items: center;
+}
+
 h1 {
     font-size: 22px;
     margin-top: 0.25em;
