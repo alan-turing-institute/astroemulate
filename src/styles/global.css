@@ -43,7 +43,7 @@ main {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 100px;
     margin-top: 0.25em;
 }
 
@@ -96,7 +96,7 @@ h2 {
     margin: 0 0 1em;
     font-weight: normal;
     color: #111827;
-    font-size: 20px;
+    font-size: 50px;
 }
 
 p {
