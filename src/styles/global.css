@@ -94,11 +94,15 @@ p {
     line-height: 24px;
     letter-spacing: -0.006em;
     margin: 0;
+    flex: 1;
 }
 
 p.left-text {
     text-align: left;
-    flex: 1;
+}
+
+p.right-text {
+    text-align: right;
 }
 
 code {
