@@ -136,13 +136,8 @@ import { Code } from "astro:components";
 					</p>
 				</div>
 			</div>
-			<div>
-				<p>
-					<b>Quick Install</b>
-				</p>
-				<p>
-					<Code code={`pip install autoemulate`} lang="python" />
-				</p>
+			<div class="quick-install">
+				<h4>Quick install <Code code={`pip install autoemulate`} lang="python" /></h4>
 			</div>
 
 			<style>
@@ -164,6 +159,14 @@ import { Code } from "astro:components";
 					z-index: 1000;
 					display: flex;
 					padding: 10px 0;
+				}
+
+				.quick-install {
+					display: flex;
+					align-items: center;
+					margin-top: 20px;
+					font-size: 50px;
+					margin-left: 25%;
 				}
 
 				#container {
