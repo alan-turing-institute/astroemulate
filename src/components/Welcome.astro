@@ -159,11 +159,21 @@ import { Code } from "astro:components";
                     z-index: 1000;
                     display: flex;
                     transition: top 0.3s;
-					background-color: rgba(235, 114, 138, 0.5);
+                    background-color: rgba(235, 114, 138, 0.5);
                 }
 
                 .navbar.hidden {
                     top: -100px;
+                }
+
+                .intro {
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 16px;
+                    width: 100%;
+                    margin-top: 100px; /* Adjust this value as needed */
                 }
 
                 .quick-install {
@@ -193,15 +203,6 @@ import { Code } from "astro:components";
                     flex-direction: column;
                     justify-content: center;
                     padding: 16px;
-                }
-
-                .intro {
-                    align-items: start;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    padding: 16px;
-                    width: 100%;
                 }
 
                 .panel {
