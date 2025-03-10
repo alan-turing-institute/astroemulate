@@ -96,6 +96,11 @@ p {
     margin: 0;
 }
 
+p.left-text {
+    text-align: left;
+    flex: 1;
+}
+
 code {
     display: inline-block;
     background:
