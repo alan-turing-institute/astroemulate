@@ -12,386 +12,402 @@ import { Code } from "astro:components";
 ---
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<nav class="navbar">
-			<img src={logo.src} width="100" alt="AutoEmulate Logo" />
-		</nav>
-		<div class="intro">
-			<h1>Accelerating large-scale simulations with AI.</h1>
-			<h2>Replace complex simulations with fast, accurate emulators.</h2>
-			<section id="links">
-				<a
-					class="button"
-					href="https://alan-turing-institute.github.io/autoemulate/index.html"
-					>Read our docs</a
-				>
-			</section><br />
-		</div>
-		<div class="hero">
-			<div class="panel">
-				<img
-					style="text-align: left;"
-					width="35%"
-					src={logo.src}
-					alt="AutoEmulate Logo"
-				/>
-				<p class="right-text">
-					<b>Introducing <i>AutoEmulate</i></b><br />
-					<i>AutoEmulate</i> is a Python library that makes it easy to
-					create accurate and efficient emulators for complex simulations.
-					<br />
-					Automatically fit and compare various emulators, ranging from
-					simple models like Radial Basis Functions and Second Order Polynomials
-					to more complex models like Support Vector Machines, Gaussian
-					Processes and Conditional Neural Processes.
-					<br />
-					Under the hood, the package runs a complete machine learning
-					pipeline to compare and optimise a wide range of models, and
-					provides functions for downstream tasks like prediction, sensitivity
-					analysis and calibration.
-				</p><br /><br />
-			</div>
-			<div class="panel">
-				<p class="left-text">
-					<b>Why emulators?</b><br />
-					For complex systems research, the computational cost of simulation
-					poses a significant bottleneck.
-					<br />
-					Simulation models and the tasks required of them are becoming
-					increasingly complex.
-					<br />
-					These models can take hours, or even days to run.
-					<br />
-					Emulation is a technique that can create a fast, accurate approximation
-					of a simulation model.
-					<br />
-					Emulation is domain agnostic and can be applied to any simulation
-					model.
-				</p>
-				<div style="flex-direction: row;">
-					<div class="image-footer">
-						<img
-							style="text-align: right;"
-							width="10%"
-							src={heart.src}
-							alt="Heart Image"
-						/>
-						<footer>Cardiovascular simulations</footer>
-					</div>
-					<div class="image-footer">
-						<img
-							style="text-align: right;"
-							width="10%"
-							src={quantum.src}
-							alt="Ab Initio Quantum simulations Image"
-						/>
-						<footer>
-							Ab Initio Quantum simulations for materials
-						</footer>
-					</div>
-					<div class="image-footer">
-						<img
-							style="text-align: right;"
-							width="10%"
-							src={engine.src}
-							alt="Air flow in a single stage of an aero-engine Image"
-						/>
-						<footer>
-							Air flow in a single stage of an aero-engine
-						</footer>
-					</div>
-				</div>
-				<br />
-			</div>
-			<div class="panel benefits">
-				<div class="benefit">
-					<img src={code.src} alt="Low-Code Icon" width="50" />
-					<h3>Low code</h3>
-					<p>
-						Data-processing, model comparison, cross-validation,
-						hyperparameter search and more in few lines of code.
-					</p>
-				</div>
-				<div class="benefit">
-					<img
-						src={domain.src}
-						alt="Domain Agnostic Icon"
-						width="50"
-					/>
-					<h3>Domain agnostic</h3>
-					<p>Can be applied to simulation models from any domain.</p>
-				</div>
-				<div class="benefit">
-					<img
-						src={integration.src}
-						alt="Easy Integration Icon"
-						width="50"
-					/>
-					<h3>Easy Integration</h3>
-					<p>
-						All emulators are compatible with commonly used Python
-						ML frameworks, making them easy to integrate into
-						downstream applications.
-					</p>
-				</div>
-			</div>
-			<div class="quick-install">
-				<h4>Quick install <Code code={`pip install autoemulate`} lang="python" /></h4>
-			</div>
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <main>
+        <nav class="navbar" id="navbar">
+            <img src={logo.src} width="100" alt="AutoEmulate Logo" />
+        </nav>
+        <div class="intro">
+            <h1>Accelerating large-scale simulations with AI.</h1>
+            <h2>Replace complex simulations with fast, accurate emulators.</h2>
+            <section id="links">
+                <a
+                    class="button"
+                    href="https://alan-turing-institute.github.io/autoemulate/index.html"
+                    >Read our docs</a
+                >
+            </section><br />
+        </div>
+        <div class="hero">
+            <div class="panel">
+                <img
+                    style="text-align: left;"
+                    width="35%"
+                    src={logo.src}
+                    alt="AutoEmulate Logo"
+                />
+                <p class="right-text">
+                    <b>Introducing <i>AutoEmulate</i></b><br />
+                    <i>AutoEmulate</i> is a Python library that makes it easy to
+                    create accurate and efficient emulators for complex simulations.
+                    <br />
+                    Automatically fit and compare various emulators, ranging from
+                    simple models like Radial Basis Functions and Second Order Polynomials
+                    to more complex models like Support Vector Machines, Gaussian
+                    Processes and Conditional Neural Processes.
+                    <br />
+                    Under the hood, the package runs a complete machine learning
+                    pipeline to compare and optimise a wide range of models, and
+                    provides functions for downstream tasks like prediction, sensitivity
+                    analysis and calibration.
+                </p><br /><br />
+            </div>
+            <div class="panel">
+                <p class="left-text">
+                    <b>Why emulators?</b><br />
+                    For complex systems research, the computational cost of simulation
+                    poses a significant bottleneck.
+                    <br />
+                    Simulation models and the tasks required of them are becoming
+                    increasingly complex.
+                    <br />
+                    These models can take hours, or even days to run.
+                    <br />
+                    Emulation is a technique that can create a fast, accurate approximation
+                    of a simulation model.
+                    <br />
+                    Emulation is domain agnostic and can be applied to any simulation
+                    model.
+                </p>
+                <div style="flex-direction: row;">
+                    <div class="image-footer">
+                        <img
+                            style="text-align: right;"
+                            width="10%"
+                            src={heart.src}
+                            alt="Heart Image"
+                        />
+                        <footer>Cardiovascular simulations</footer>
+                    </div>
+                    <div class="image-footer">
+                        <img
+                            style="text-align: right;"
+                            width="10%"
+                            src={quantum.src}
+                            alt="Ab Initio Quantum simulations Image"
+                        />
+                        <footer>
+                            Ab Initio Quantum simulations for materials
+                        </footer>
+                    </div>
+                    <div class="image-footer">
+                        <img
+                            style="text-align: right;"
+                            width="10%"
+                            src={engine.src}
+                            alt="Air flow in a single stage of an aero-engine Image"
+                        />
+                        <footer>
+                            Air flow in a single stage of an aero-engine
+                        </footer>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div class="panel benefits">
+                <div class="benefit">
+                    <img src={code.src} alt="Low-Code Icon" width="50" />
+                    <h3>Low code</h3>
+                    <p>
+                        Data-processing, model comparison, cross-validation,
+                        hyperparameter search and more in few lines of code.
+                    </p>
+                </div>
+                <div class="benefit">
+                    <img
+                        src={domain.src}
+                        alt="Domain Agnostic Icon"
+                        width="50"
+                    />
+                    <h3>Domain agnostic</h3>
+                    <p>Can be applied to simulation models from any domain.</p>
+                </div>
+                <div class="benefit">
+                    <img
+                        src={integration.src}
+                        alt="Easy Integration Icon"
+                        width="50"
+                    />
+                    <h3>Easy Integration</h3>
+                    <p>
+                        All emulators are compatible with commonly used Python
+                        ML frameworks, making them easy to integrate into
+                        downstream applications.
+                    </p>
+                </div>
+            </div>
+            <div class="quick-install">
+                <h4>Quick install <Code code={`pip install autoemulate`} lang="python" /></h4>
+            </div>
 
-			<style>
-				#background {
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					z-index: -1;
-					filter: blur(100px);
-				}
+            <style>
+                #background {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    filter: blur(100px);
+                }
 
-				.navbar {
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100%;
-					z-index: 1000;
-					display: flex;
-				}
+                .navbar {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 1000;
+                    display: flex;
+                    transition: top 0.3s;
+                }
 
-				.quick-install {
-					display: flex;
-					align-items: center;
-					margin-top: 20px;
-					font-size: 50px;
-					margin-left: 25%;
-				}
+                .navbar.hidden {
+                    top: -100px;
+                }
 
-				#container {
-					font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
-						"Nimbus Sans", Arial, sans-serif;
-					height: 100%;
-				}
+                .quick-install {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+                    font-size: 50px;
+                    margin-left: 25%;
+                }
 
-				main {
-					display: flex;
-					justify-content: center;
-					flex-direction: column;
-					overflow-x: hidden;
-				}
+                #container {
+                    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+                        "Nimbus Sans", Arial, sans-serif;
+                    height: 100%;
+                }
 
-				.hero {
-					display: flex;
-					align-items: start;
-					flex-direction: column;
-					justify-content: center;
-					padding: 16px;
-				}
+                main {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    overflow-x: hidden;
+                }
 
-				.intro {
-					align-items: start;
-					flex-direction: column;
-					justify-content: center;
-					text-align: center;
-					padding: 16px;
-					width: 100%;
-				}
+                .hero {
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 16px;
+                }
 
-				.panel {
-					display: flex;
-					align-items: center;
-					padding: 50px;
-				}
+                .intro {
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 16px;
+                    width: 100%;
+                }
 
-				.benefits {
-					display: flex;
-					justify-content: space-around;
-					align-items: center;
-					width: 100%;
-				}
+                .panel {
+                    display: flex;
+                    align-items: center;
+                    padding: 50px;
+                }
 
-				.benefit {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					width: 30%;
-					text-align: center;
-				}
+                .benefits {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                }
 
-				h1 {
-					font-size: 100px;
-					margin-top: 0.25em;
-				}
+                .benefit {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 30%;
+                    text-align: center;
+                }
 
-				#links {
-					gap: 16px;
-				}
+                h1 {
+                    font-size: 100px;
+                    margin-top: 0.25em;
+                }
 
-				#links a {
-					padding: 10px 12px;
-					color: #111827;
-					text-decoration: none;
-					transition: color 0.2s;
-				}
+                #links {
+                    gap: 16px;
+                }
 
-				#links a:hover {
-					color: rgb(78, 80, 86);
-				}
+                #links a {
+                    padding: 10px 12px;
+                    color: #111827;
+                    text-decoration: none;
+                    transition: color 0.2s;
+                }
 
-				#links a svg {
-					height: 1em;
-					margin-left: 8px;
-				}
+                #links a:hover {
+                    color: rgb(78, 80, 86);
+                }
 
-				#links a.button {
-					color: white;
-					background: linear-gradient(
-						83.21deg,
-						#3245ff 0%,
-						#bc52ee 100%
-					);
-					box-shadow:
-						inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-						inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-					border-radius: 10px;
-				}
+                #links a svg {
+                    height: 1em;
+                    margin-left: 8px;
+                }
 
-				#links a.button:hover {
-					color: rgb(230, 230, 230);
-					box-shadow: none;
-				}
+                #links a.button {
+                    color: white;
+                    background: linear-gradient(
+                        83.21deg,
+                        #3245ff 0%,
+                        #bc52ee 100%
+                    );
+                    box-shadow:
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+                        inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+                    border-radius: 10px;
+                }
 
-				pre {
-					font-family: ui-monospace, "Cascadia Code",
-						"Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono",
-						monospace;
-					font-weight: normal;
-					background: linear-gradient(
-						14deg,
-						#d83333 0%,
-						#f041ff 100%
-					);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-					background-clip: text;
-					margin: 0;
-				}
+                #links a.button:hover {
+                    color: rgb(230, 230, 230);
+                    box-shadow: none;
+                }
 
-				h2 {
-					margin: 0 0 1em;
-					font-weight: normal;
-					color: #111827;
-					font-size: 50px;
-				}
+                pre {
+                    font-family: ui-monospace, "Cascadia Code",
+                        "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono",
+                        monospace;
+                    font-weight: normal;
+                    background: linear-gradient(
+                        14deg,
+                        #d83333 0%,
+                        #f041ff 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    margin: 0;
+                }
 
-				p {
-					color: #4b5563;
-					font-size: 16px;
-					line-height: 24px;
-					letter-spacing: -0.006em;
-					margin: 0;
-					flex: 1;
-				}
+                h2 {
+                    margin: 0 0 1em;
+                    font-weight: normal;
+                    color: #111827;
+                    font-size: 50px;
+                }
 
-				p.left-text {
-					text-align: left;
-				}
+                p {
+                    color: #4b5563;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.006em;
+                    margin: 0;
+                    flex: 1;
+                }
 
-				p.right-text {
-					text-align: right;
-				}
+                p.left-text {
+                    text-align: left;
+                }
 
-				.image-footer {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					margin-top: 10px;
-				}
+                p.right-text {
+                    text-align: right;
+                }
 
-				.image-footer img {
-					margin-bottom: 5px;
-				}
+                .image-footer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 10px;
+                }
 
-				.image-footer footer {
-					text-align: center;
-				}
+                .image-footer img {
+                    margin-bottom: 5px;
+                }
 
-				code {
-					display: inline-block;
-					background:
-						linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%)
-							padding-box,
-						linear-gradient(
-								155deg,
-								#d83333 0%,
-								#f041ff 18%,
-								#f5cee7 45%
-							)
-							border-box;
-					border-radius: 8px;
-					border: 1px solid transparent;
-					padding: 6px 8px;
-				}
+                .image-footer footer {
+                    text-align: center;
+                }
 
-				.box {
-					padding: 16px;
-					background: rgba(255, 255, 255, 1);
-					border-radius: 16px;
-					border: 1px solid white;
-				}
+                code {
+                    display: inline-block;
+                    background:
+                        linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%)
+                            padding-box,
+                        linear-gradient(
+                                155deg,
+                                #d83333 0%,
+                                #f041ff 18%,
+                                #f5cee7 45%
+                            )
+                            border-box;
+                    border-radius: 8px;
+                    border: 1px solid transparent;
+                    padding: 6px 8px;
+                }
 
-				#news {
-					position: absolute;
-					bottom: 16px;
-					right: 16px;
-					max-width: 300px;
-					text-decoration: none;
-					transition: background 0.2s;
-					backdrop-filter: blur(50px);
-				}
+                .box {
+                    padding: 16px;
+                    background: rgba(255, 255, 255, 1);
+                    border-radius: 16px;
+                    border: 1px solid white;
+                }
 
-				#news:hover {
-					background: rgba(255, 255, 255, 0.55);
-				}
+                #news {
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                    max-width: 300px;
+                    text-decoration: none;
+                    transition: background 0.2s;
+                    backdrop-filter: blur(50px);
+                }
 
-				@media screen and (max-height: 368px) {
-					#news {
-						display: none;
-					}
-				}
+                #news:hover {
+                    background: rgba(255, 255, 255, 0.55);
+                }
 
-				@media screen and (max-width: 768px) {
-					#container {
-						display: flex;
-						flex-direction: column;
-					}
+                @media screen and (max-height: 368px) {
+                    #news {
+                        display: none;
+                    }
+                }
 
-					#hero {
-						display: block;
-						padding-top: 10%;
-					}
+                @media screen and (max-width: 768px) {
+                    #container {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
-					#links {
-						flex-wrap: wrap;
-					}
+                    #hero {
+                        display: block;
+                        padding-top: 10%;
+                    }
 
-					#links a.button {
-						padding: 14px 18px;
-					}
+                    #links {
+                        flex-wrap: wrap;
+                    }
 
-					#news {
-						right: 16px;
-						left: 16px;
-						bottom: 2.5rem;
-						max-width: 100%;
-					}
+                    #links a.button {
+                        padding: 14px 18px;
+                    }
 
-					h1 {
-						line-height: 1.5;
-					}
-				}
-			</style>
-		</div>
-	</main>
+                    #news {
+                        right: 16px;
+                        left: 16px;
+                        bottom: 2.5rem;
+                        max-width: 100%;
+                    }
+
+                    h1 {
+                        line-height: 1.5;
+                    }
+                }
+            </style>
+        </div>
+    </main>
 </div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > window.innerHeight / 2) {
+            navbar.classList.add('hidden');
+        } else {
+            navbar.classList.remove('hidden');
+        }
+    });
+</script>
