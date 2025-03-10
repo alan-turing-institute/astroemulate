@@ -4,6 +4,9 @@ import heart from "../assets/heart.png";
 import background from "../assets/background.svg";
 import quantum from "../assets/quantum.gif";
 import engine from "../assets/engine.jpg";
+import code from "../assets/code.svg";
+import domain from "../assets/domain.svg";
+import integration from "../assets/integration.svg";
 import "../styles/global.css";
 ---
 
@@ -85,16 +88,38 @@ import "../styles/global.css";
 				/>
 				<br />
 			</div>
-			<div class="panel">
-				<h3>Benefits</h3>
-				<p>
-					Low-Code: Data-processing, model comparison,
-					cross-validation, hyperparameter search and more in few
-					lines of code Domain agnostic: Can be applied to simulation
-					models from any domain Easy Integration: All emulators are
-					compatible with commonly used Python ML frameworks, making
-					them easy to integrate into Downstream Applications
-				</p>
+			<div class="panel benefits">
+				<div class="benefit">
+					<img src={code.src} alt="Low-Code Icon" width="50" />
+					<p>
+						Low-Code: Data-processing, model comparison,
+						cross-validation, hyperparameter search and more in few
+						lines of code.
+					</p>
+				</div>
+				<div class="benefit">
+					<img
+						src={domain.src}
+						alt="Domain Agnostic Icon"
+						width="50"
+					/>
+					<p>
+						Domain agnostic: Can be applied to simulation models
+						from any domain.
+					</p>
+				</div>
+				<div class="benefit">
+					<img
+						src={integration.src}
+						alt="Easy Integration Icon"
+						width="50"
+					/>
+					<p>
+						Easy Integration: All emulators are compatible with
+						commonly used Python ML frameworks, making them easy to
+						integrate into Downstream Applications.
+					</p>
+				</div>
 			</div>
 		</div>
 
@@ -151,6 +176,21 @@ import "../styles/global.css";
 			.panel {
 				display: flex;
 				align-items: center;
+			}
+
+			.benefits {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				width: 100%;
+			}
+
+			.benefit {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 30%;
+				text-align: center;
 			}
 
 			h1 {
