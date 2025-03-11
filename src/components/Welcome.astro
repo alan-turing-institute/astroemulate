@@ -11,6 +11,10 @@ import "../styles/global.css";
 import { Code } from "astro:components";
 ---
 
+<head>
+	<title>Welcome to AutoEmulate</title>
+</head>
+
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
@@ -176,42 +180,47 @@ import { Code } from "astro:components";
 				</h4>
 			</div>
 			<div class="quick-start">
-				<h2>The <i>AutoEmulate</i> pipeline, in a just a few lines of code...</h2>
-				<Code
-					code={`
-					import numpy as np
-					from autoemulate.compare import AutoEmulate
-					from autoemulate.experimental_design import LatinHypercube
-					from autoemulate.simulations.projectile import simulate_projectile
+				<h2>
+					The <i>AutoEmulate</i> pipeline, in a just a few lines of code...
+				</h2>
+				<div class="code-box">
+					<Code
+						class="quick-start-code"
+						code={`
+                        import numpy as np
+                        from autoemulate.compare import AutoEmulate
+                        from autoemulate.experimental_design import LatinHypercube
+                        from autoemulate.simulations.projectile import simulate_projectile
 
-					# sample from a simulation
-					lhd = LatinHypercube([(-5., 1.), (0., 1000.)])
-					X = lhd.sample(100)
-					y = np.array([simulate_projectile(x) for x in X])
+                        # sample from a simulation
+                        lhd = LatinHypercube([(-5., 1.), (0., 1000.)])
+                        X = lhd.sample(100)
+                        y = np.array([simulate_projectile(x) for x in X])
 
-					# compare emulators
-					ae = AutoEmulate()
-					ae.setup(X, y)
-					best_emulator = ae.compare() 
+                        # compare emulators
+                        ae = AutoEmulate()
+                        ae.setup(X, y)
+                        best_emulator = ae.compare() 
 
-					# cross-validation results
-					ae.summarise_cv() 
-					ae.plot_cv()
+                        # cross-validation results
+                        ae.summarise_cv() 
+                        ae.plot_cv()
 
-					# test set results for the best emulator
-					ae.evaluate(best_emulator) 
-					ae.plot_eval(best_emulator)
+                        # test set results for the best emulator
+                        ae.evaluate(best_emulator) 
+                        ae.plot_eval(best_emulator)
 
-					# refit on full data and emulate!
-					emulator = ae.refit(best_emulator) 
-					emulator.predict(X)
+                        # refit on full data and emulate!
+                        emulator = ae.refit(best_emulator) 
+                        emulator.predict(X)
 
-					# global sensitivity analysis
-					si = ae.sensitivity_analysis(emulator)
-					ae.plot_sensitivity_analysis(si)
-				`}
-					lang="python"
-				/>
+                        # global sensitivity analysis
+                        si = ae.sensitivity_analysis(emulator)
+                        ae.plot_sensitivity_analysis(si)
+                    `}
+						lang="python"
+					/>
+				</div>
 			</div>
 
 			<style>
@@ -288,6 +297,16 @@ import { Code } from "astro:components";
 					margin-top: 20px;
 					margin-left: 10%;
 					width: 70%;
+					text-align: left;
+				}
+
+				.quick-start-code {
+					background-color: #f5f5f5;
+					border: 1px solid #ddd;
+					border-radius: 8px;
+					padding: 16px;
+					overflow-x: auto;
+					text-align: left;
 				}
 
 				#container {
@@ -322,6 +341,7 @@ import { Code } from "astro:components";
 					justify-content: space-around;
 					align-items: center;
 					width: 95%;
+					flex-wrap: wrap;
 				}
 
 				.benefit {
@@ -330,6 +350,7 @@ import { Code } from "astro:components";
 					align-items: center;
 					width: 30%;
 					text-align: center;
+					margin-bottom: 20px;
 				}
 
 				h1 {
