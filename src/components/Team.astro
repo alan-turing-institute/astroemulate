@@ -1,5 +1,5 @@
 ---
-import logo from "../assets/autoemulate_logo_blank.png";
+import Navbar from "./Navbar.astro";
 import background from "../assets/background.svg";
 import "../styles/global.css";
 ---
@@ -11,24 +11,7 @@ import "../styles/global.css";
 <div id="container">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
-        <nav class="navbar" id="navbar">
-            <img src={logo.src} width="100" alt="AutoEmulate Logo" />
-            <sub class="navbar-logo-text"><b>utoEmulate</b></sub>
-            <div class="navbar-right">
-                <a
-                    href="https://alan-turing-institute.github.io/autoemulate/index.html"
-                    target="_blank">Documentation</a
-                >
-                <a
-                    href="https://github.com/alan-turing-institute/autoemulate"
-                    target="_blank">GitHub</a
-                >
-                <a
-                    href="https://alan-turing-institute.github.io/gp-demo/"
-                    target="_blank">What is emulation?</a
-                >
-            </div>
-        </nav>
+        <Navbar />
         <div class="intro">
             <h1>Who we are</h1>
             <h2>
@@ -217,47 +200,6 @@ import "../styles/global.css";
                 z-index: -1;
                 filter: blur(100px);
             }
-
-            .navbar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 1000;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px 20px;
-                background-color: rgba(255, 255, 255, 0.8);
-                transition: top 0.3s;
-            }
-
-            .navbar-right {
-                display: flex;
-                gap: 20px;
-                white-space: nowrap;
-                padding-right: 10%;
-            }
-
-            .navbar-right a {
-                color: black;
-                text-decoration: none;
-            }
-
-            .navbar-right a:hover {
-                color: purple;
-            }
-
-            .navbar.hidden {
-                top: -100px;
-            }
-
-            .navbar-logo-text {
-                position: absolute;
-                bottom: 40%;
-                left: 105px;
-            }
-
             .intro {
                 align-items: start;
                 flex-direction: column;

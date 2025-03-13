@@ -14,6 +14,7 @@ import integration from "../assets/integration.svg";
 import "../styles/global.css";
 import { Code } from "astro:components";
 import { Content as QuickStartCode } from "./quick-start-code.md";
+import Navbar from "./Navbar.astro";
 ---
 
 <head>
@@ -23,24 +24,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
-		<nav class="navbar" id="navbar">
-			<img src={logo.src} width="100" alt="AutoEmulate Logo" />
-			<sub class="navbar-logo-text"><b>utoEmulate</b></sub>
-			<div class="navbar-right">
-				<a
-					href="https://alan-turing-institute.github.io/autoemulate/index.html"
-					target="_blank">Documentation</a
-				>
-				<a
-					href="https://github.com/alan-turing-institute/autoemulate"
-					target="_blank">GitHub</a
-				>
-				<a
-					href="https://alan-turing-institute.github.io/gp-demo/"
-					target="_blank">What is emulation?</a
-				>
-			</div>
-		</nav>
+		<Navbar />
 		<div class="intro">
 			<h1>Accelerating large-scale simulations with AI.</h1>
 			<h2>Replace complex simulations with fast, accurate emulators.</h2>
@@ -80,11 +64,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					</p>
 				</div>
 				<div class="benefit">
-					<img
-						src={ml.src}
-						alt="ML Icon"
-						width="50"
-					/>
+					<img src={ml.src} alt="ML Icon" width="50" />
 					<h3>Machine Learning</h3>
 					<p>
 						Random Forests<br />
@@ -94,11 +74,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					</p>
 				</div>
 				<div class="benefit">
-					<img
-						src={dl.src}
-						alt="DL Icon"
-						width="50"
-					/>
+					<img src={dl.src} alt="DL Icon" width="50" />
 					<h3>Deep Learning</h3>
 					<p>
 						Multi-output / Multi-task Gaussian Processes<br />
@@ -208,47 +184,6 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					z-index: -1;
 					filter: blur(100px);
 				}
-
-				.navbar {
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100%;
-					z-index: 1000;
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					padding: 10px 20px;
-					background-color: rgba(255, 255, 255, 0.8);
-					transition: top 0.3s;
-				}
-
-				.navbar-right {
-					display: flex;
-					gap: 20px;
-					white-space: nowrap;
-					padding-right: 10%;
-				}
-
-				.navbar-right a {
-					color: black;
-					text-decoration: none;
-				}
-
-				.navbar-right a:hover {
-					color: purple;
-				}
-
-				.navbar.hidden {
-					top: -100px;
-				}
-
-				.navbar-logo-text {
-					position: absolute;
-					bottom: 40%;
-					left: 105px;
-				}
-
 				.intro {
 					align-items: start;
 					flex-direction: column;
