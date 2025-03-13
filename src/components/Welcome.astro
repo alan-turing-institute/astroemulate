@@ -3,7 +3,7 @@ import logo from "../assets/autoemulate_logo_blank.png";
 import logo_no_grid from "../assets/autoemulate_logo_no_grid.png";
 import reality from "../assets/reality.jpg";
 import background from "../assets/background.svg";
-import simulation from "../assets/planetswe.gif";
+import simulation from "../assets/simulation.jpeg";
 import GP from "../assets/GP.png";
 import code from "../assets/code.svg";
 import domain from "../assets/domain.svg";
@@ -118,23 +118,20 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					The computational cost of simulating complex systems poses a
 					significant <i>bottleneck</i>.
 				</h3>
-				<img
-					style="text-align: right;"
-					width="40%"
-					src={reality.src}
-					alt="Reality Image"
-				/>
+				<img width="40%" src={reality.src} alt="Reality Image" />
 				<br />
 			</div>
 			<div class="panel-right">
 				<img
-					style="text-align: left;"
 					width="30%"
 					src={simulation.src}
 					alt="Simulation Exmaple Image"
 				/>
 				<br />
+				<div style="width: 10%;"></div>
 				<h3 class="right-text">
+					<br />
+					<br />
 					Simulation models are becoming <i>increasingly</i> complex.
 					<br />
 					<br />
@@ -152,12 +149,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					<br />
 					Emulation can be applied to <i>any</i> simulation model.
 				</h3>
-				<img
-					style="text-align: right;"
-					width="40%"
-					src={GP.src}
-					alt="Gaussian Process Image"
-				/>
+				<img width="40%" src={GP.src} alt="Gaussian Process Image" />
 			</div>
 			<div class="quick-install">
 				<h4>
@@ -299,11 +291,11 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 
 				.panel-right {
 					display: flex;
-					/* align-items: right; */
-					/* justify-content: flex-end; */
+					align-items: right;
+					justify-content: flex-end;
 					/* padding: 50px; */
-					/* right: 0; */
-					/* text-align: right; */
+					right: 0;
+					text-align: right;
 				}
 
 				.benefits {
