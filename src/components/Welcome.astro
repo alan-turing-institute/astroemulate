@@ -115,28 +115,24 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 			</div>
 			<div class="panel-left">
 				<h3 class="left-text">
-					The computational cost of simulating complex systems
-					poses a significant <i>bottleneck</i>.
+					The computational cost of simulating complex systems poses a
+					significant <i>bottleneck</i>.
 				</h3>
-				<div class="image-footer">
-					<img
-						style="text-align: right;"
-						width="100%"
-						src={reality.src}
-						alt="Reality Image"
-					/>
-				</div>
+				<img
+					style="text-align: right;"
+					width="40%"
+					src={reality.src}
+					alt="Reality Image"
+				/>
 				<br />
 			</div>
 			<div class="panel-right">
-				<div class="image-footer">
-					<img
-						style="text-align: right;"
-						width="150%"
-						src={simulation.src}
-						alt="Simulation Exmaple Image"
-					/>
-				</div>
+				<img
+					style="text-align: left;"
+					width="30%"
+					src={simulation.src}
+					alt="Simulation Exmaple Image"
+				/>
 				<br />
 				<h3 class="right-text">
 					Simulation models are becoming <i>increasingly</i> complex.
@@ -156,14 +152,12 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					<br />
 					Emulation can be applied to <i>any</i> simulation model.
 				</h3>
-				<div class="image-footer">
-					<img
-						style="text-align: right;"
-						width="100%"
-						src={GP.src}
-						alt="Gaussian Process Image"
-					/>
-				</div>
+				<img
+					style="text-align: right;"
+					width="40%"
+					src={GP.src}
+					alt="Gaussian Process Image"
+				/>
 			</div>
 			<div class="quick-install">
 				<h4>
@@ -305,9 +299,11 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 
 				.panel-right {
 					display: flex;
-					align-items: center;
-					padding: 50px;
-					right: 0;
+					/* align-items: right; */
+					/* justify-content: flex-end; */
+					/* padding: 50px; */
+					/* right: 0; */
+					/* text-align: right; */
 				}
 
 				.benefits {
@@ -408,21 +404,6 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 
 				h3.right-text {
 					text-align: right;
-				}
-
-				.image-footer {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					margin-top: 10px;
-				}
-
-				.image-footer img {
-					margin-bottom: 5px;
-				}
-
-				.image-footer footer {
-					text-align: center;
 				}
 
 				.box {
