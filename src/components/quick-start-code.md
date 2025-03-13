@@ -8,7 +8,7 @@
     ae.summarise_cv()
 ```
 
-| Model                     | Short | RMSE       | R²       |
+| model                     | short | rmse       | r²       |
 |---------------------------|-------|------------|----------|
 | GaussianProcess           | gp    | 546.703381 | 0.993752 |
 | RadialBasisFunctions      | rbf   | 1037.254646| 0.978469 |

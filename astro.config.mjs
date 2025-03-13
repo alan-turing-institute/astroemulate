@@ -7,7 +7,7 @@ export default defineConfig({
     base: '/astroemulate',
     markdown: {
         shikiConfig: {
-            theme: 'catppuccin-macchiato',
+            theme: 'everforest-light',
         },
     },
 })
