@@ -10,7 +10,7 @@ import domain from "../assets/domain.svg";
 import integration from "../assets/integration.svg";
 import "../styles/global.css";
 import { Code } from "astro:components";
-// import { Prism } from "@astrojs/prism";
+import { Content as QuickStartCode } from "./quick-start-code.md";
 ---
 
 <head>
@@ -186,12 +186,7 @@ import { Code } from "astro:components";
 			</div>
 			<div class="quick-start">
 				<h2>Find the best emulator in a just a few lines of code...</h2>
-				<Code
-					class="quick-start-code"
-					code={`ae = AutoEmulate()\nae.setup(X, y)\nbest_emulator = ae.compare()`}
-					language="python"
-					defaultColor={false}
-				/>
+				<QuickStartCode />
 			</div>
 
 			<style>
