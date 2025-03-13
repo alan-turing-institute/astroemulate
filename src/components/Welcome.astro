@@ -51,7 +51,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 			</section>
 		</div>
 		<div class="hero">
-			<div class="panel">
+			<div class="panel-left">
 				<img
 					style="text-align: left;"
 					width="35%"
@@ -81,7 +81,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 			<div class="seondary-intro">
 				<h1>State of the art emulators</h1>
 			</div>
-			<div class="panel benefits">
+			<div class="panel-left benefits">
 				<div class="benefit">
 					<img src={code.src} alt="Low-Code Icon" width="50" />
 					<h3>Low code</h3>
@@ -113,7 +113,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					</p>
 				</div>
 			</div>
-			<div class="panel">
+			<div class="panel-left">
 				<h3 class="left-text">
 					The computational cost of simulating complex systems
 					poses a significant <i>bottleneck</i>.
@@ -128,7 +128,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 				</div>
 				<br />
 			</div>
-			<div class="panel">
+			<div class="panel-right">
 				<div class="image-footer">
 					<img
 						style="text-align: right;"
@@ -148,7 +148,7 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 			<div class="seondary-intro">
 				<h1>Open source & free to use</h1>
 			</div>
-			<div class="panel">
+			<div class="panel-left">
 				<h3 class="left-text">
 					<i>AutoEmulate</i> produces <i>accurate</i> stand-ins for simulation
 					models that are <i>faster</i> to run.
@@ -297,10 +297,17 @@ import { Content as QuickStartCode } from "./quick-start-code.md";
 					padding: 16px;
 				}
 
-				.panel {
+				.panel-left {
 					display: flex;
 					align-items: center;
 					padding: 50px;
+				}
+
+				.panel-right {
+					display: flex;
+					align-items: center;
+					padding: 50px;
+					right: 0;
 				}
 
 				.benefits {
