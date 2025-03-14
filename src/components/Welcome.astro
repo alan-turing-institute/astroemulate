@@ -18,6 +18,18 @@ import Navbar from "./Navbar.astro";
 ---
 
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"
+	></script>
+	<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-30RQRKFG08");
+	</script>
 	<title>Welcome to AutoEmulate</title>
 </head>
 
