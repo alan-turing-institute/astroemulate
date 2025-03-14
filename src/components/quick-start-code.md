@@ -8,6 +8,11 @@
     ae.summarise_cv()
 ```
 
+<details>
+<summary>
+    Example output
+</summary>
+
 |      | model                     | short | rmse       | r²       |
 |------|---------------------------|-------|------------|----------|
 | 0    | GaussianProcess           | gp    | 546.703381 | 0.993752 |
@@ -18,3 +23,5 @@
 | 5    | GradientBoosting          | gb    | 3633.381679| 0.686120 |
 | 6    | SecondOrderPolynomial     | sop   | 3974.504619| 0.577358 |
 | 7    | LightGBM                  | lgbm  | 5213.820303| 0.325861 |
+
+</details>
