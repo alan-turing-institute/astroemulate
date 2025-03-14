@@ -4,11 +4,11 @@
     best_emulator = ae.compare()
 ```
 
-```python
+<!-- ```python
     ae.summarise_cv()
-```
+``` -->
 
-<details>
+<!-- <details>
 <summary>
     Example output
 </summary>
@@ -24,4 +24,4 @@
 | 6    | SecondOrderPolynomial     | sop   | 3974.504619| 0.577358 |
 | 7    | LightGBM                  | lgbm  | 5213.820303| 0.325861 |
 
-</details>
+</details> -->
