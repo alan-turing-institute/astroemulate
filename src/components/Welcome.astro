@@ -18,432 +18,412 @@ import Navbar from "./Navbar.astro";
 ---
 
 <head>
-	<!-- Google tag (gtag.js) -->
-	<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"
-	></script>
-	<script type="text/partytown">
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"
+    ></script>
+    <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-		gtag("config", "G-30RQRKFG08");
-	</script>
-	<title>Welcome to AutoEmulate</title>
+        gtag("config", "G-30RQRKFG08");
+    </script>
+    <title>Welcome to AutoEmulate</title>
 </head>
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<Navbar />
-		<div class="intro">
-			<h1>Accelerating large-scale simulations with AI.</h1>
-			<h2>Replace complex simulations with fast, accurate emulators.</h2>
-			<section id="links">
-				<a
-					class="button"
-					href="https://alan-turing-institute.github.io/autoemulate/index.html"
-					target="_blank"
-					>Get started
-				</a>
-			</section>
-		</div>
-		<div class="hero">
-			<div class="panel-left">
-				<img
-					style="text-align: left;"
-					width="35%"
-					src={logo.src}
-					alt="AutoEmulate Logo"
-				/>
-				<div style="width: 10%;"></div>
-				<h3>
-					<i>AutoEmulate</i> is a Python library for automatically creating
-					accurate and efficient emulators of complex simulations.
-					<br /><br />
-					Run a complete machine learning pipeline to compare and optimise
-					a wide range of models, with functions for downstream tasks like
-					prediction, sensitivity analysis and calibration.
-				</h3>
-			</div>
-			<div class="seondary-intro">
-				<h1>State of the art emulators</h1>
-			</div>
-			<div class="panel-left benefits">
-				<div class="benefit">
-					<img src={classical.src} alt="Classical Icon" width="50" />
-					<h3>Classical</h3>
-					<p>
-						Radial Basis Functions<br />
-						Second Order Polynomials
-					</p>
-				</div>
-				<div class="benefit">
-					<img src={ml.src} alt="ML Icon" width="50" />
-					<h3>Machine Learning</h3>
-					<p>
-						Random Forests<br />
-						Gradient Boosting<br />
-						Support Vector Machines<br />
-						LightGBM
-					</p>
-				</div>
-				<div class="benefit">
-					<img src={dl.src} alt="DL Icon" width="50" />
-					<h3>Deep Learning</h3>
-					<p>
-						Multi-output / Multi-task Gaussian Processes<br />
-						Conditional Neural Processes
-					</p>
-				</div>
-			</div>
-			<!-- <div class="panel-left">
-				<h3 class="left-text">
-					The computational cost of simulating complex systems poses a
-					significant <i>bottleneck</i>.
-				</h3>
-				<img width="40%" src={reality.src} alt="Reality Image" />
-				<br />
-			</div>
-			<div class="panel-right">
-				<img
-					width="25%"
-					src={simulation.src}
-					alt="Simulation Exmaple Image"
-				/>
-				<br />
-				<div style="width: 10%;"></div>
-				<h3 class="right-text">
-					<br />
-					<br />
-					Simulation models are becoming <i>increasingly</i> complex.
-					<br />
-					<br />
-					These models can take <i>hours</i>, or even <i>days</i> to run.
-				</h3>
-			</div> -->
-			<div class="seondary-intro">
-				<h1><br />Open source & free to use</h1>
-			</div>
-			<div class="panel-left benefits">
-				<div class="benefit">
-					<img src={code.src} alt="Low-Code Icon" width="50" />
-					<h3>Low code</h3>
-					<p>
-						Data-processing, model comparison, cross-validation,
-						hyperparameter search and more in few lines of code.
-					</p>
-				</div>
-				<div class="benefit">
-					<img
-						src={domain.src}
-						alt="Domain Agnostic Icon"
-						width="50"
-					/>
-					<h3>Domain agnostic</h3>
-					<p>Can be applied to simulation models from any domain.</p>
-				</div>
-				<div class="benefit">
-					<img
-						src={integration.src}
-						alt="Easy Integration Icon"
-						width="50"
-					/>
-					<h3>Easy Integration</h3>
-					<p>
-						All emulators are compatible with commonly used Python
-						ML frameworks, making them easy to integrate into
-						downstream applications.
-					</p>
-				</div>
-			</div>
-			<!-- <div class="panel-left">
-				<h3 class="left-text">
-					<i>AutoEmulate</i> produces <i>accurate</i> stand-ins for simulation
-					models that are <i>faster</i> to run.
-					<br />
-					<br />
-					Emulation can be applied to <i>any</i> simulation model.
-				</h3>
-				<img width="40%" src={GP.src} alt="Gaussian Process Image" />
-			</div> -->
-			<div class="quick-install">
-				<h4>
-					Quick install <Code
-						code={`pip install autoemulate`}
-						lang="python"
-					/>
-				</h4>
-			</div>
-			<div class="quick-start">
-				<h2>Find the best emulator in a just a few lines of code...</h2>
-				<div class="quick-start-code">
-					<QuickStartCode />
-				</div>
-			</div>
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <main>
+        <Navbar />
+        <div class="intro">
+            <h1>Accelerating large-scale simulations with AI.</h1>
+            <h2>Replace complex simulations with fast, accurate emulators.</h2>
+            <section id="links">
+                <a
+                    class="button"
+                    href="https://alan-turing-institute.github.io/autoemulate/index.html"
+                    target="_blank"
+                    >Get started
+                </a>
+            </section>
+        </div>
+        <div class="hero">
+            <div class="panel-left">
+                <img
+                    style="text-align: left;"
+                    width="35%"
+                    src={logo.src}
+                    alt="AutoEmulate Logo"
+                />
+                <div style="width: 10%;"></div>
+                <h3>
+                    <i>AutoEmulate</i> is a Python library for automatically creating
+                    accurate and efficient emulators of complex simulations.
+                    <br /><br />
+                    Run a complete machine learning pipeline to compare and optimise
+                    a wide range of models, with functions for downstream tasks like
+                    prediction, sensitivity analysis and calibration.
+                </h3>
+            </div>
+            <div class="seondary-intro">
+                <h1>State of the art emulators</h1>
+            </div>
+            <div class="panel-left benefits">
+                <div class="benefit">
+                    <img src={classical.src} alt="Classical Icon" width="50" />
+                    <h3>Classical</h3>
+                    <p>
+                        Radial Basis Functions<br />
+                        Second Order Polynomials
+                    </p>
+                </div>
+                <div class="benefit">
+                    <img src={ml.src} alt="ML Icon" width="50" />
+                    <h3>Machine Learning</h3>
+                    <p>
+                        Random Forests<br />
+                        Gradient Boosting<br />
+                        Support Vector Machines<br />
+                        LightGBM
+                    </p>
+                </div>
+                <div class="benefit">
+                    <img src={dl.src} alt="DL Icon" width="50" />
+                    <h3>Deep Learning</h3>
+                    <p>
+                        Multi-output / Multi-task Gaussian Processes<br />
+                        Conditional Neural Processes
+                    </p>
+                </div>
+            </div>
+            <div class="seondary-intro">
+                <h1><br />Open source & free to use</h1>
+            </div>
+            <div class="panel-left benefits">
+                <div class="benefit">
+                    <img src={code.src} alt="Low-Code Icon" width="50" />
+                    <h3>Low code</h3>
+                    <p>
+                        Data-processing, model comparison, cross-validation,
+                        hyperparameter search and more in few lines of code.
+                    </p>
+                </div>
+                <div class="benefit">
+                    <img
+                        src={domain.src}
+                        alt="Domain Agnostic Icon"
+                        width="50"
+                    />
+                    <h3>Domain agnostic</h3>
+                    <p>Can be applied to simulation models from any domain.</p>
+                </div>
+                <div class="benefit">
+                    <img
+                        src={integration.src}
+                        alt="Easy Integration Icon"
+                        width="50"
+                    />
+                    <h3>Easy Integration</h3>
+                    <p>
+                        All emulators are compatible with commonly used Python
+                        ML frameworks, making them easy to integrate into
+                        downstream applications.
+                    </p>
+                </div>
+            </div>
+            <div class="quick-install">
+                <h4>
+                    Quick install <Code
+                        code={`pip install autoemulate`}
+                        lang="python"
+                    />
+                </h4>
+            </div>
+            <div class="quick-start">
+                <h2>Find the best emulator in a just a few lines of code...</h2>
+                <div class="quick-start-code">
+                    <QuickStartCode />
+                </div>
+            </div>
 
-			<style>
-				h3 {
-					font-size: 30px;
-				}
+            <style>
+                h3 {
+                    font-size: 30px;
+                }
 
-				#background {
-					position: fixed;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					z-index: -1;
-					filter: blur(100px);
-				}
-				.intro {
-					align-items: start;
-					flex-direction: column;
-					justify-content: center;
-					text-align: center;
-					padding: 16px;
-					width: 100%;
-					margin-top: 100px; /* Adjust this value as needed */
-				}
+                #background {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    filter: blur(100px);
+                }
+                .intro {
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 16px;
+                    width: 100%;
+                    margin-top: 100px; /* Adjust this value as needed */
+                }
 
-				.seondary-intro {
-					align-items: start;
-					flex-direction: column;
-					justify-content: center;
-					text-align: center;
-					padding: 16px;
-					width: 100%;
-				}
+                .seondary-intro {
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 16px;
+                    width: 100%;
+                }
 
-				.quick-install {
-					display: flex;
-					align-items: center;
-					margin-top: 20px;
-					font-size: 50px;
-					margin-left: 10%;
-				}
+                .quick-install {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+                    font-size: 50px;
+                    margin-left: 10%;
+                }
 
-				.quick-start {
-					align-items: center;
-					margin-top: 20px;
-					margin-left: 10%;
-					width: 70%;
-					text-align: left;
-				}
+                .quick-start {
+                    align-items: center;
+                    margin-top: 20px;
+                    margin-left: 10%;
+                    width: 70%;
+                    text-align: left;
+                }
 
-				.quick-start-code {
-					background-color: rgb(252, 246, 229);
-					padding: 10px;
-					border-radius: 5px;
-					font-size: 25px;
-				}
+                .quick-start-code {
+                    background-color: rgb(252, 246, 229);
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 25px;
+                }
 
-				#container {
-					font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
-						"Nimbus Sans", Arial, sans-serif;
-					height: 100%;
-				}
+                #container {
+                    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+                        "Nimbus Sans", Arial, sans-serif;
+                    height: 100%;
+                }
 
-				main {
-					display: flex;
-					justify-content: center;
-					flex-direction: column;
-					overflow-x: hidden;
-				}
+                main {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    overflow-x: hidden;
+                }
 
-				.hero {
-					display: flex;
-					align-items: start;
-					flex-direction: column;
-					justify-content: center;
-					padding: 16px;
-				}
+                .hero {
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 16px;
+                }
 
-				.panel-left {
-					display: flex;
-					align-items: center;
-					padding: 50px;
-				}
+                .panel-left {
+                    display: flex;
+                    align-items: center;
+                    padding: 50px;
+                }
 
-				.panel-right {
-					display: flex;
-					align-items: right;
-					justify-content: flex-end;
-					/* padding: 50px; */
-					right: 0;
-					text-align: right;
-				}
+                .panel-right {
+                    display: flex;
+                    align-items: right;
+                    justify-content: flex-end;
+                    /* padding: 50px; */
+                    right: 0;
+                    text-align: right;
+                }
 
-				.benefits {
-					display: flex;
-					justify-content: space-around;
-					align-items: center;
-					width: 95%;
-					flex-wrap: wrap;
-				}
+                .benefits {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 95%;
+                    flex-wrap: wrap;
+                }
 
-				.benefit {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					width: 30%;
-					text-align: center;
-					margin-bottom: 20px;
-				}
+                .benefit {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 30%;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
 
-				h1 {
-					font-size: 100px;
-					margin-top: 0.25em;
-				}
+                h1 {
+                    font-size: 100px;
+                    margin-top: 0.25em;
+                }
 
-				#links {
-					gap: 16px;
-				}
+                #links {
+                    gap: 16px;
+                }
 
-				#links a {
-					padding: 10px 12px;
-					color: #111827;
-					text-decoration: none;
-					transition: color 0.2s;
-				}
+                #links a {
+                    padding: 10px 12px;
+                    color: #111827;
+                    text-decoration: none;
+                    transition: color 0.2s;
+                }
 
-				#links a:hover {
-					color: rgb(78, 80, 86);
-				}
+                #links a:hover {
+                    color: rgb(78, 80, 86);
+                }
 
-				#links a svg {
-					height: 1em;
-					margin-left: 8px;
-				}
+                #links a svg {
+                    height: 1em;
+                    margin-left: 8px;
+                }
 
-				#links a.button {
-					color: white;
-					background: linear-gradient(
-						83.21deg,
-						#3245ff 0%,
-						#bc52ee 100%
-					);
-					box-shadow:
-						inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-						inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-					border-radius: 10px;
-				}
+                #links a.button {
+                    color: white;
+                    background: linear-gradient(
+                        83.21deg,
+                        #3245ff 0%,
+                        #bc52ee 100%
+                    );
+                    box-shadow:
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+                        inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+                    border-radius: 10px;
+                }
 
-				#links a.button:hover {
-					color: rgb(230, 230, 230);
-					box-shadow: none;
-				}
+                #links a.button:hover {
+                    color: rgb(230, 230, 230);
+                    box-shadow: none;
+                }
 
-				pre {
-					font-family: ui-monospace, "Cascadia Code",
-						"Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono",
-						monospace;
-					font-weight: normal;
-					background: linear-gradient(
-						14deg,
-						#d83333 0%,
-						#f041ff 100%
-					);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-					background-clip: text;
-					margin: 0;
-				}
+                pre {
+                    font-family: ui-monospace, "Cascadia Code",
+                        "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono",
+                        monospace;
+                    font-weight: normal;
+                    background: linear-gradient(
+                        14deg,
+                        #d83333 0%,
+                        #f041ff 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    margin: 0;
+                }
 
-				h2 {
-					margin: 0 0 1em;
-					font-weight: normal;
-					color: #111827;
-					font-size: 50px;
-				}
+                h2 {
+                    margin: 0 0 1em;
+                    font-weight: normal;
+                    color: #111827;
+                    font-size: 50px;
+                }
 
-				p {
-					color: #4b5563;
-					font-size: 22px;
-					line-height: 24px;
-					letter-spacing: -0.006em;
-					margin: 0;
-					flex: 1;
-				}
+                p {
+                    color: #4b5563;
+                    font-size: 22px;
+                    line-height: 24px;
+                    letter-spacing: -0.006em;
+                    margin: 0;
+                    flex: 1;
+                }
 
-				h3.left-text {
-					text-align: left;
-				}
+                h3.left-text {
+                    text-align: left;
+                }
 
-				h3.right-text {
-					text-align: right;
-				}
+                h3.right-text {
+                    text-align: right;
+                }
 
-				.box {
-					padding: 16px;
-					background: rgba(255, 255, 255, 1);
-					border-radius: 16px;
-					border: 1px solid white;
-				}
+                .box {
+                    padding: 16px;
+                    background: rgba(255, 255, 255, 1);
+                    border-radius: 16px;
+                    border: 1px solid white;
+                }
 
-				#news {
-					position: absolute;
-					bottom: 16px;
-					right: 16px;
-					max-width: 300px;
-					text-decoration: none;
-					transition: background 0.2s;
-					backdrop-filter: blur(50px);
-				}
+                #news {
+                    position: absolute;
+                    bottom: 16px;
+                    right: 16px;
+                    max-width: 300px;
+                    text-decoration: none;
+                    transition: background 0.2s;
+                    backdrop-filter: blur(50px);
+                }
 
-				#news:hover {
-					background: rgba(255, 255, 255, 0.55);
-				}
+                #news:hover {
+                    background: rgba(255, 255, 255, 0.55);
+                }
 
-				@media screen and (max-height: 368px) {
-					#news {
-						display: none;
-					}
-				}
+                @media screen and (max-height: 368px) {
+                    #news {
+                        display: none;
+                    }
+                }
 
-				@media screen and (max-width: 768px) {
-					#container {
-						display: flex;
-						flex-direction: column;
-					}
+                @media screen and (max-width: 768px) {
+                    #container {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
-					#hero {
-						display: block;
-						padding-top: 10%;
-					}
+                    #hero {
+                        display: block;
+                        padding-top: 10%;
+                    }
 
-					#links {
-						flex-wrap: wrap;
-					}
+                    #links {
+                        flex-wrap: wrap;
+                    }
 
-					#links a.button {
-						padding: 14px 18px;
-					}
+                    #links a.button {
+                        padding: 14px 18px;
+                    }
 
-					#news {
-						right: 16px;
-						left: 16px;
-						bottom: 2.5rem;
-						max-width: 100%;
-					}
+                    #news {
+                        right: 16px;
+                        left: 16px;
+                        bottom: 2.5rem;
+                        max-width: 100%;
+                    }
 
-					h1 {
-						line-height: 1.5;
-					}
-				}
-			</style>
-		</div>
-	</main>
+                    h1 {
+                        line-height: 1.5;
+                    }
+
+                    .intro, .hero, .panel-left, .panel-right, .benefits, .quick-install, .quick-start {
+                        padding: 16px;
+                        width: 100%;
+                        margin: 0;
+                        text-align: center;
+                    }
+
+                    .benefit {
+                        width: 100%;
+                    }
+
+                    .quick-start-code {
+                        font-size: 18px;
+                    }
+                }
+            </style>
+        </div>
+    </main>
 </div>
 
 <script>
-	window.addEventListener("scroll", function () {
-		const navbar = document.getElementById("navbar");
-		if (window.scrollY > window.innerHeight / 2) {
-			navbar.classList.add("hidden");
-		} else {
-			navbar.classList.remove("hidden");
-		}
-	});
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > window.innerHeight / 2) {
+            navbar.classList.add("hidden");
+        } else {
+            navbar.classList.remove("hidden");
+        }
+    });
 </script>
