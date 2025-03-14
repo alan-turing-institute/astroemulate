@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://autoemulate.co.uk',
+    site: 'https://alan-turing-institute.github.io',
     base: '/astroemulate',
     markdown: {
         shikiConfig: {
