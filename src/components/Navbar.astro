@@ -64,6 +64,33 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         bottom: 40%;
         left: 105px;
     }
+
+    @media screen and (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        .navbar-right {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            padding-right: 0;
+            width: 100%;
+        }
+
+        .navbar-right a {
+            padding: 10px 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        .navbar-logo-text {
+            position: static;
+            margin-left: 10px;
+        }
+    }
 </style>
 
 <script>
