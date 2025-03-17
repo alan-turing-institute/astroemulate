@@ -1,0 +1,589 @@
+---
+import logo from "../assets/autoemulate_logo_hex_blank.png";
+import logo_no_grid from "../assets/autoemulate_logo_no_grid.png";
+import reality from "../assets/reality.jpg";
+import background from "../assets/background.svg";
+import simulation from "../assets/simulation.png";
+import GP from "../assets/GP.png";
+import classical from "../assets/classical.png";
+import ml from "../assets/ml.svg";
+import dl from "../assets/dl.svg";
+import code from "../assets/code.svg";
+import domain from "../assets/domain.svg";
+import integration from "../assets/integration.svg";
+import "../styles/global.css";
+import { Code } from "astro:components";
+import { Content as QuickStartCode } from "./quick-start-code.md";
+import Navbar from "./Navbar.astro";
+---
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"
+    ></script>
+    <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-30RQRKFG08");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AutoEmulate - Accelerating large-scale simulations with AI">
+    <title>Welcome to AutoEmulate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<div id="container">
+    <div class="background-wrapper">
+        <img id="background" src={background.src} alt="" fetchpriority="high" />
+    </div>
+    <main>
+        <Navbar />
+        <div class="intro">
+            <h1>Accelerating large-scale simulations with AI.</h1>
+            <h2>Replace complex simulations with fast, accurate emulators.</h2>
+            <section id="links">
+                <a
+                    class="button"
+                    href="https://alan-turing-institute.github.io/autoemulate/index.html"
+                    target="_blank"
+                    >Get started
+                </a>
+            </section>
+        </div>
+        <div class="hero">
+            <div class="panel-left">
+                <div class="logo-container">
+                    <img
+                        src={logo.src}
+                        alt="AutoEmulate Logo"
+                    />
+                </div>
+                <div class="intro-text">
+                    <h3>
+                        <i>AutoEmulate</i> is a Python library for automatically creating
+                        accurate and efficient emulators of complex simulations.
+                        <br /><br />
+                        Run a complete machine learning pipeline to compare and optimise
+                        a wide range of models, with functions for downstream tasks like
+                        prediction, sensitivity analysis and calibration.
+                    </h3>
+                </div>
+            </div>
+            <div class="section-header">
+                <h2>State of the art emulators</h2>
+            </div>
+            <div class="benefits-section">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src={classical.src} alt="Classical Icon" />
+                    </div>
+                    <h3>Classical</h3>
+                    <p>
+                        Radial Basis Functions<br />
+                        Second Order Polynomials
+                    </p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src={ml.src} alt="ML Icon" />
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <p>
+                        Random Forests<br />
+                        Gradient Boosting<br />
+                        Support Vector Machines<br />
+                        LightGBM
+                    </p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src={dl.src} alt="DL Icon" />
+                    </div>
+                    <h3>Deep Learning</h3>
+                    <p>
+                        Multi-output / Multi-task Gaussian Processes<br />
+                        Conditional Neural Processes
+                    </p>
+                </div>
+            </div>
+            <div class="section-header">
+                <h2>Open source & free to use</h2>
+            </div>
+            <div class="benefits-section">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src={code.src} alt="Low-Code Icon" />
+                    </div>
+                    <h3>Low code</h3>
+                    <p>
+                        Data-processing, model comparison, cross-validation,
+                        hyperparameter search and more in few lines of code.
+                    </p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src={domain.src} alt="Domain Agnostic Icon" />
+                    </div>
+                    <h3>Domain agnostic</h3>
+                    <p>Can be applied to simulation models from any domain.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <img src={integration.src} alt="Easy Integration Icon" />
+                    </div>
+                    <h3>Easy Integration</h3>
+                    <p>
+                        All emulators are compatible with commonly used Python
+                        ML frameworks, making them easy to integrate into
+                        downstream applications.
+                    </p>
+                </div>
+            </div>
+            <div class="quick-install">
+                <h4>
+                    Quick install <Code
+                        code={`pip install autoemulate`}
+                        lang="python"
+                    />
+                </h4>
+            </div>
+            <div class="quick-start">
+                <h2>Find the best emulator in just a few lines of code...</h2>
+                <div class="quick-start-code">
+                    <QuickStartCode />
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<style>
+    :root {
+        --primary-gradient: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+        --primary-blue: #3245ff;
+        --primary-purple: #bc52ee;
+        --text-primary: #111827;
+        --text-secondary: #4b5563;
+        --bg-light: #ffffff;
+        --radius-sm: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --max-width: 1280px;
+        --padding-x: 5%;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        color: var(--text-primary);
+        overflow-x: hidden;
+    }
+
+    .background-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    #background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(100px) opacity(0.8);
+        transform: scale(1.2);
+    }
+
+    #container {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        height: 100%;
+        overflow-x: hidden;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--padding-x);
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 160px;
+        padding-bottom: 80px;
+        width: 100%;
+    }
+
+    .intro h1 {
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        margin-bottom: 1rem;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .intro h2 {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+        color: var(--text-secondary);
+        max-width: 800px;
+    }
+
+    #links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    #links a.button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: white;
+        background: var(--primary-gradient);
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 12px rgba(50, 69, 255, 0.2);
+    }
+
+    #links a.button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(50, 69, 255, 0.3);
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .panel-left {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .logo-container {
+        flex: 0 0 auto;
+        width: 35%;
+        max-width: 300px;
+    }
+
+    .logo-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .intro-text {
+        flex: 1;
+    }
+
+    .intro-text h3 {
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
+        font-weight: 400;
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+
+    .section-header {
+        text-align: center;
+        margin: 3rem 0 2rem;
+    }
+
+    .section-header h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 600;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .benefits-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 1rem 0 3rem;
+    }
+
+    .benefit {
+        flex: 1;
+        min-width: 300px;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .benefit:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .benefit-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1.5rem;
+    }
+
+    .benefit-icon img {
+        width: 100%;
+        height: auto;
+        max-height: 70px;
+        object-fit: contain;
+    }
+
+    .benefit h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+
+    .benefit p {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .quick-install {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem 0 2rem;
+        padding: 0 1rem;
+    }
+
+    .quick-install h4 {
+        font-size: clamp(1.25rem, 3vw, 2rem);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .quick-install :global(pre) {
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: var(--radius-sm);
+        font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .quick-start {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto 5rem;
+    }
+
+    .quick-start h2 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .quick-start-code {
+        background-color: rgba(252, 246, 229, 0.9);
+        padding: 1.5rem;
+        border-radius: var(--radius-md);
+        overflow: auto;
+        box-shadow: var(--shadow-md);
+    }
+
+    .quick-start-code :global(pre) {
+        font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    @media screen and (max-width: 768px) {
+        .intro {
+            padding-top: 120px;
+        }
+        
+        .panel-left {
+            flex-direction:column;
+            text-align: center;
+            gap: 1.5rem;
+        }
+        
+        .logo-container {
+            width: 60%;
+            margin: 0 auto;
+        }
+        
+        .intro-text h3 {
+            text-align: center;
+        }
+        
+        .benefits-section {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .benefit {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .section-header {
+            margin: 2rem 0 1rem;
+        }
+        
+        .quick-install {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .quick-install h4 {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .quick-start {
+            margin-bottom: 3rem;
+        }
+        
+        .quick-start-code {
+            padding: 1rem;
+        }
+        
+        .quick-start-code :global(pre) {
+            font-size: 0.8rem;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .intro {
+            padding-top: 100px;
+        }
+        
+        .intro h1 {
+            font-size: 2rem;
+        }
+        
+        .intro h2 {
+            font-size: 1.25rem;
+        }
+        
+        #links a.button {
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+        }
+        
+        .logo-container {
+            width: 80%;
+        }
+        
+        .benefit {
+            padding: 1.5rem;
+        }
+        
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .benefit h3 {
+            font-size: 1.25rem;
+        }
+        
+        .benefit p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<script>
+    // Add smooth scrolling for anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a[href^="#"]');
+        
+        for (const link of links) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
+    
+    // Add animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const benefits = document.querySelectorAll('.benefit');
+        
+        function checkVisibility() {
+            benefits.forEach(benefit => {
+                const rect = benefit.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+                
+                if (isVisible) {
+                    benefit.style.opacity = '1';
+                    benefit.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Initialize benefits with opacity 0 and transform
+        benefits.forEach(benefit => {
+            benefit.style.opacity = '0';
+            benefit.style.transform = 'translateY(20px)';
+            benefit.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Check visibility on load and scroll
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
+        checkVisibility();
+    });
+</script>
+
