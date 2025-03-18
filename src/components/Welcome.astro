@@ -135,21 +135,27 @@ import Navbar from "./Navbar.astro";
                 </div>
             </div>
 
-            <div class="quick-install">
-                <h4>
-                    Quick install <Code
-                        code={`pip install autoemulate`}
-                        lang="python"
-                    />
-                </h4>
-            </div> 
-			
-            <div class="quick-start">
-                <h2>Find the best emulator in just a few lines of code...</h2>
-                <div class="quick-start-code">
-                    <QuickStartCode />
+            <!-- Combined quick install and quick start section with new styling -->
+            <div class="quick-section-container">
+                <h2 class="quick-section-title">Get Started</h2>
+                <div class="quick-cards-wrapper">
+                    <!-- Quick Install Card -->
+                    <div class="quick-card">
+                        <h4>Quick Install</h4>
+                        <div class="code-block">
+                            <Code code={`pip install autoemulate`} lang="python" />
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Start Card -->
+                    <div class="quick-card">
+                        <h4>Find the best emulator in just a few lines of code</h4>
+                        <div class="quick-start-code">
+                            <QuickStartCode />
+                        </div>
+                    </div>
                 </div>
-            </div> 
+            </div>
 
             <style>
                 h3 {
@@ -192,28 +198,73 @@ import Navbar from "./Navbar.astro";
                     width: 100%;
                 }
 
-                .quick-install {
+                /* Styling for the entire Get Started section */
+                .quick-section-container {
+                    background: linear-gradient(to right, rgba(50, 69, 255, 0.1), rgba(188, 82, 238, 0.1));
+                    padding: 60px 20px;
+                    margin: 40px 0;
+                    border-radius: 16px;
+                    width: 100%;
+                }
+                
+                .quick-section-title {
+                    text-align: center;
+                    font-size: 48px;
+                    margin-bottom: 40px;
+                    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                }
+                
+                .quick-cards-wrapper {
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    margin-top: 20px;
-                    font-size: 50px;
-                    margin-left: 10%;
+                    gap: 30px;
+                    width: 100%;
+                    max-width: 1000px;
+                    margin: 0 auto;
                 }
-
-                .quick-start {
-                    align-items: center;
-                    margin-top: 20px;
-                    margin-left: 10%;
-                    width: 70%;
-                    text-align: left;
+                
+                /* Individual card styling */
+                .quick-card {
+                    background: white;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                    padding: 24px 32px;
+                    width: 100%;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    border: 1px solid rgba(78, 80, 86, 0.1);
                 }
-
+                
+                .quick-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                }
+                
+                .quick-card h4 {
+                    font-size: 28px;
+                    margin: 0 0 16px 0;
+                    color: #111827;
+                    font-weight: 500;
+                    text-align: center;
+                }
+                
+                .code-block {
+                    background-color: rgb(252, 246, 229);
+                    padding: 16px 20px;
+                    border-radius: 8px;
+                    font-size: 22px;
+                }
+                
                 .quick-start-code {
                     background-color: rgb(252, 246, 229);
                     padding: 10px;
-                    border-radius: 5px;
-                    font-size: 25px;
+                    border-radius: 8px;
+                    font-size: 20px;
                 }
+
 
                 #container {
                     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
@@ -326,8 +377,7 @@ import Navbar from "./Navbar.astro";
 
                 #links a.button:hover {
                     color: rgb(230, 230, 230);
--                    box-shadow: none;
--                    box-shadow: none;
+                    box-shadow: none;
                 }
 
                 pre {
@@ -428,7 +478,7 @@ import Navbar from "./Navbar.astro";
                         font-size: 50px;
                     }
 
-                    .intro, .hero, .panel-left, .panel-right, .benefits, .quick-install, .quick-start {
+                    .intro, .hero, .panel-left, .panel-right, .benefits {
                         padding: 16px;
                         width: 100%;
                         margin: 0;
@@ -447,18 +497,27 @@ import Navbar from "./Navbar.astro";
                         min-height: auto;
                     }
 
-                    .quick-install {
-                        font-size: 30px;
-                        margin-left: 0;
+                    .install-card {
+                        width: 90%;
+                        padding: 20px;
                     }
 
-                    .quick-start {
-                        margin-left: 0;
-                        width: 100%;
+                    .quick-section-container {
+                        padding: 40px 15px;
+                        margin: 20px 0;
                     }
-
+                    
+                    .quick-section-title {
+                        font-size: 36px;
+                        margin-bottom: 30px;
+                    }
+                    
+                    .quick-card {
+                        padding: 20px;
+                    }
+                    
                     .quick-start-code {
-                        font-size: 18px;
+                        font-size: 16px;
                     }
                 }
             </style>
