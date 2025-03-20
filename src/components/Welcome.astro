@@ -1,5 +1,5 @@
 ---
-import logo from "../assets/autoemulate_logo_hex_blank.png";
+import logo from "../assets/autoemulate_logo.png";
 import logo_no_grid from "../assets/autoemulate_logo_no_grid.png";
 import reality from "../assets/reality.jpg";
 import background from "../assets/background.svg";
@@ -37,39 +37,46 @@ import Navbar from "./Navbar.astro";
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
         <Navbar />
-        <div class="intro">
-            <h1>Accelerating large-scale simulations with AI.</h1>
-            <h2>Replace complex simulations with fast, accurate emulators.</h2>
-            <section id="links">
-                <a
-                    class="button"
-                    href="https://alan-turing-institute.github.io/autoemulate/index.html"
-                    target="_blank"
-                    >Get started
-                </a>
-            </section>
-        </div>
-        <div class="hero">
-            <div class="panel-left">
-                <img
-                    style="text-align: left;"
-                    width="25%"
-                    src={logo.src}
-                    alt="AutoEmulate Logo"
-                />
-                <div style="width: 10%;"></div>
-                <h3>
-                    <i>AutoEmulate</i> is a Python library for automatically creating
-                    accurate and efficient emulators of complex simulations.
-                    <br /><br />
-                    Run a complete machine learning pipeline to compare and optimise
-                    a wide range of models, with functions for downstream tasks like
-                    prediction, sensitivity analysis and calibration.
-                </h3>
+        <div class="intro-section">
+            <div class="intro">
+                <h1>Accelerating large-scale simulations with AI.</h1>
+                <h2>Replace complex simulations with fast, accurate emulators.</h2>
+                <section id="links">
+                    <a
+                        class="button"
+                        href="https://alan-turing-institute.github.io/autoemulate/index.html"
+                        target="_blank"
+                        >Get started
+                    </a>
+                </section>
             </div>
+        </div>
+        
+        <div class="about-section">
+            <div class="hero">
+                <div class="panel-left">
+                    <img
+                        style="text-align: left;"
+                        width="25%"
+                        src={logo.src}
+                        alt="AutoEmulate Logo"
+                    />
+                    <div style="width: 10%;"></div>
+                    <h3>
+                        <i>AutoEmulate</i> is a Python library for automatically creating
+                        accurate and efficient emulators of complex simulations.
+                        <br /><br />
+                        Run a complete machine learning pipeline to compare and optimise
+                        a wide range of models, with functions for downstream tasks like
+                        prediction, sensitivity analysis and calibration.
+                    </h3>
+                </div>
+            </div>
+        </div>
 
+        <div class="open-source-section">
             <div class="seondary-intro">
-                <h1><br />Open source & free to use</h1>
+                <h1>Open source & free to use</h1>
             </div>
             <div class="panel-left benefits">
                 <div class="benefit">
@@ -103,7 +110,9 @@ import Navbar from "./Navbar.astro";
                     </p>
                 </div>
             </div>
+        </div>
 
+        <div class="emulators-section">
             <div class="seondary-intro">
                 <h1>State of the art emulators</h1>
             </div>
@@ -134,394 +143,424 @@ import Navbar from "./Navbar.astro";
                     </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Combined quick install and quick start section with new styling -->
-            <div class="quick-section-container">
-                <h2 class="quick-section-title">Quick start</h2>
-                <div class="quick-cards-wrapper">
-                    <!-- Quick Install Card -->
-                    <div class="quick-card">
-                        <h4>Install</h4>
-                        <div class="code-block">
-                            <Code code={`pip install autoemulate`} lang="python" />
-                        </div>
+        <!-- Quick start section with existing styling -->
+        <div class="quick-section-container">
+            <h2 class="quick-section-title">Quick start</h2>
+            <div class="quick-cards-wrapper">
+                <!-- Quick Install Card -->
+                <div class="quick-card">
+                    <h4>Install</h4>
+                    <div class="code-block">
+                        <Code code={`pip install autoemulate`} lang="python" />
                     </div>
-                    
-                    <!-- Quick Start Card -->
-                    <div class="quick-card">
-                        <h4>Find the best emulator in just a few lines of code</h4>
-                        <div class="quick-start-code">
-                            <QuickStartCode />
-                        </div>
+                </div>
+                
+                <!-- Quick Start Card -->
+                <div class="quick-card">
+                    <h4>Find the best emulator in just a few lines of code</h4>
+                    <div class="quick-start-code">
+                        <QuickStartCode />
                     </div>
                 </div>
             </div>
+        </div>
 
-            <style>
-                h3 {
-                    font-size: 30px;
-                    line-height: 1.6;
-                    color: #4b5563;
-                    font-weight: 400; /* Less bold appearance for h3 */
-                }
+        <style>
+            h3 {
+                font-size: 30px;
+                line-height: 1.6;
+                color: #4b5563;
+                font-weight: 400; /* Less bold appearance for h3 */
+            }
 
-                #background {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: -1;
-                    filter: blur(100px);
-                }
-				
-                .intro {
-                    align-items: start;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    padding: 16px;
-                    width: 100%;
-                    margin-top: 100px; /* Adjust this value as needed */
-                }
+            #background {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                filter: blur(100px);
+            }
+            
+            /* Intro section styling */
+            .intro-section {
+                padding: 40px 20px;
+                border-radius: 0;
+                margin-bottom: 0;
+            }
+            
+            .intro {
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 16px;
+                width: 100%;
+                margin-top: 100px;
+            }
 
-                .intro h2 {
-                    color: #4b5563;
-                }
+            .intro h2 {
+                color: #4b5563;
+            }
 
-                .seondary-intro {
-                    align-items: start;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    padding: 16px;
-                    width: 100%;
-                }
+            /* About section styling */
+            .about-section {
+                background: white;
+                padding: 40px 20px;
+                border-radius: 16px;
+                margin: 0;
+            }
+            
+            /* Open source section styling */
+            .open-source-section {
+                padding: 40px 20px;
+                border-radius: 16px;
+                margin: 0;
+            }
+            
+            /* Emulators section styling */
+            .emulators-section {
+                background: white;
+                padding: 40px 20px;
+                border-radius: 16px;
+                margin: 0;
+            }
 
-                /* Styling for the entire Get Started section */
-                .quick-section-container {
-                    background: linear-gradient(to right, rgba(50, 69, 255, 0.1), rgba(188, 82, 238, 0.1));
-                    padding: 60px 20px;
-                    margin: 40px 0;
-                    border-radius: 16px;
-                    width: 100%;
-                }
-                
-                .quick-section-title {
-                    text-align: center;
-                    font-size: 48px;
-                    margin-bottom: 40px;
-                    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                }
-                
-                .quick-cards-wrapper {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 30px;
-                    width: 100%;
-                    max-width: 1000px;
-                    margin: 0 auto;
-                }
-                
-                /* Individual card styling */
-                .quick-card {
-                    background: white;
-                    border-radius: 12px;
-                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                    padding: 24px 32px;
-                    width: 100%;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease;
-                    border: 1px solid rgba(78, 80, 86, 0.1);
-                }
-                
-                .quick-card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-                }
-                
-                .quick-card h4 {
-                    font-size: 28px;
-                    margin: 0 0 16px 0;
-                    color: #111827;
-                    font-weight: 500;
-                    text-align: center;
-                }
-                
-                .code-block {
-                    background-color: rgb(252, 246, 229);
-                    padding: 16px 20px;
-                    border-radius: 8px;
-                    font-size: 22px;
-                }
-                
-                .quick-start-code {
-                    background-color: rgb(252, 246, 229);
-                    padding: 10px;
-                    border-radius: 8px;
-                    font-size: 20px;
-                }
+            .seondary-intro {
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 16px;
+                width: 100%;
+            }
+
+            /* Quick start section styling (unchanged) */
+            .quick-section-container {
+                background: linear-gradient(to right, rgba(50, 69, 255, 0.1), rgba(188, 82, 238, 0.1));
+                padding: 60px 20px;
+                margin: 0;
+                border-radius: 16px;
+                width: 100%;
+            }
+            
+            .quick-section-title {
+                text-align: center;
+                font-size: 48px;
+                margin-bottom: 40px;
+                background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .quick-cards-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                width: 100%;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            
+            /* Individual card styling */
+            .quick-card {
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                padding: 24px 32px;
+                width: 100%;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border: 1px solid rgba(78, 80, 86, 0.1);
+            }
+            
+            .quick-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            }
+            
+            .quick-card h4 {
+                font-size: 28px;
+                margin: 0 0 16px 0;
+                color: #111827;
+                font-weight: 500;
+                text-align: center;
+            }
+            
+            .code-block {
+                background-color: rgb(252, 246, 229);
+                padding: 16px 20px;
+                border-radius: 8px;
+                font-size: 22px;
+            }
+            
+            .quick-start-code {
+                background-color: rgb(252, 246, 229);
+                padding: 10px;
+                border-radius: 8px;
+                font-size: 20px;
+            }
 
 
+            #container {
+                font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
+                    "Nimbus Sans", Arial, sans-serif;
+                height: 100%;
+            }
+
+            main {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                overflow-x: hidden;
+            }
+
+            .hero {
+                display: flex;
+                align-items: start;
+                flex-direction: column;
+                justify-content: center;
+                padding: 16px;
+            }
+
+            .panel-left {
+                display: flex;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .panel-right {
+                display: flex;
+                align-items: right;
+                justify-content: flex-end;
+                /* padding: 50px; */
+                right: 0;
+                text-align: right;
+            }
+
+            .benefits {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                width: 95%;
+                flex-wrap: wrap;
+            }
+
+            .benefit {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 30%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .benefit h3 {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                min-height: 40px;
+                display: flex;
+                align-items: center;
+            }
+
+            .benefit p {
+                width: 100%;
+                min-height: 120px;
+            }
+
+            h1 {
+                font-size: 100px;
+                margin-top: 0.25em;
+            }
+
+            #links {
+                gap: 16px;
+            }
+
+            #links a {
+                color: #111827;
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+
+            #links a:hover {
+                color: rgb(78, 80, 86);
+            }
+
+            #links a svg {
+                height: 1em;
+                margin-left: 8px;
+            }
+
+            /* Make the Get Started button more prominent */
+            #links a.button {
+                color: white;
+                background: linear-gradient(
+                    83.21deg,
+                    #3245ff 0%,
+                    #bc52ee 100%
+                );
+                box-shadow:
+                    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+                    0 4px 10px rgba(0, 0, 0, 0.2),
+                    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+                border-radius: 10px;
+                font-size: 24px;
+                font-weight: 300;
+                padding: 14px 28px;
+                transition: all 0.2s ease;
+            }
+
+            #links a.button:hover {
+                color: rgb(230, 230, 230);
+                box-shadow: none;
+            }
+
+            pre {
+                font-family: ui-monospace, "Cascadia Code",
+                    "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono",
+                    monospace;
+                font-weight: normal;
+                background: linear-gradient(
+                    14deg,
+                    #d83333 0%,
+                    #f041ff 100%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin: 0;
+            }
+
+            h2 {
+                margin: 0 0 1em;
+                font-weight: normal;
+                color: #111827;
+                font-size: 50px;
+            }
+
+            p {
+                color: #4b5563;
+                font-size: 22px;
+                line-height: 24px;
+                letter-spacing: -0.006em;
+                margin: 0;
+                flex: 1;
+            }
+
+            h3.left-text {
+                text-align: left;
+            }
+
+            h3.right-text {
+                text-align: right;
+            }
+
+            .box {
+                padding: 16px;
+                background: rgba(255, 255, 255, 1);
+                border-radius: 16px;
+                border: 1px solid white;
+            }
+
+            #news {
+                position: absolute;
+                bottom: 16px;
+                right: 16px;
+                max-width: 300px;
+                text-decoration: none;
+                transition: background 0.2s;
+                backdrop-filter: blur(50px);
+            }
+
+            #news:hover {
+                background: rgba(255, 255, 255, 0.55);
+            }
+
+            @media screen and (max-height: 368px) {
+                #news {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
                 #container {
-                    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
-                        "Nimbus Sans", Arial, sans-serif;
-                    height: 100%;
-                }
-
-                main {
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                    overflow-x: hidden;
-                }
-
-                .hero {
-                    display: flex;
-                    align-items: start;
-                    flex-direction: column;
-                    justify-content: center;
-                    padding: 16px;
-                }
-
-                .panel-left {
-                    display: flex;
-                    align-items: center;
-                    padding: 50px;
-                }
-
-                .panel-right {
-                    display: flex;
-                    align-items: right;
-                    justify-content: flex-end;
-                    /* padding: 50px; */
-                    right: 0;
-                    text-align: right;
-                }
-
-                .benefits {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: flex-start;
-                    width: 95%;
-                    flex-wrap: wrap;
-                }
-
-                .benefit {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    width: 30%;
-                    text-align: center;
-                    margin-bottom: 20px;
                 }
 
-                .benefit h3 {
-                    margin-top: 15px;
-                    margin-bottom: 15px;
-                    min-height: 40px;
-                    display: flex;
-                    align-items: center;
-                }
-
-                .benefit p {
-                    width: 100%;
-                    min-height: 120px;
-                }
-
-                h1 {
-                    font-size: 100px;
-                    margin-top: 0.25em;
+                #hero {
+                    display: block;
+                    padding-top: 10%;
                 }
 
                 #links {
-                    gap: 16px;
+                    flex-wrap: wrap;
                 }
 
-                #links a {
-                    color: #111827;
-                    text-decoration: none;
-                    transition: color 0.2s;
-                }
-
-                #links a:hover {
-                    color: rgb(78, 80, 86);
-                }
-
-                #links a svg {
-                    height: 1em;
-                    margin-left: 8px;
-                }
-
-                /* Make the Get Started button more prominent */
                 #links a.button {
-                    color: white;
-                    background: linear-gradient(
-                        83.21deg,
-                        #3245ff 0%,
-                        #bc52ee 100%
-                    );
-                    box-shadow:
-                        inset 0 0 0 1px rgba(255, 255, 255, 0.2),
-                        0 4px 10px rgba(0, 0, 0, 0.2),
-                        inset 0 -2px 0 rgba(0, 0, 0, 0.3);
-                    border-radius: 10px;
-                    font-size: 24px;
-                    font-weight: 300;
-                    padding: 14px 28px;
-                    transition: all 0.2s ease;
-                }
-
-                #links a.button:hover {
-                    color: rgb(230, 230, 230);
-                    box-shadow: none;
-                }
-
-                pre {
-                    font-family: ui-monospace, "Cascadia Code",
-                        "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono",
-                        monospace;
-                    font-weight: normal;
-                    background: linear-gradient(
-                        14deg,
-                        #d83333 0%,
-                        #f041ff 100%
-                    );
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    margin: 0;
-                }
-
-                h2 {
-                    margin: 0 0 1em;
-                    font-weight: normal;
-                    color: #111827;
-                    font-size: 50px;
-                }
-
-                p {
-                    color: #4b5563;
-                    font-size: 22px;
-                    line-height: 24px;
-                    letter-spacing: -0.006em;
-                    margin: 0;
-                    flex: 1;
-                }
-
-                h3.left-text {
-                    text-align: left;
-                }
-
-                h3.right-text {
-                    text-align: right;
-                }
-
-                .box {
-                    padding: 16px;
-                    background: rgba(255, 255, 255, 1);
-                    border-radius: 16px;
-                    border: 1px solid white;
+                    padding: 14px 18px;
                 }
 
                 #news {
-                    position: absolute;
-                    bottom: 16px;
                     right: 16px;
-                    max-width: 300px;
-                    text-decoration: none;
-                    transition: background 0.2s;
-                    backdrop-filter: blur(50px);
+                    left: 16px;
+                    bottom: 2.5rem;
+                    max-width: 100%;
                 }
 
-                #news:hover {
-                    background: rgba(255, 255, 255, 0.55);
+                h1 {
+                    line-height: 1.5;
+                    font-size: 50px;
                 }
 
-                @media screen and (max-height: 368px) {
-                    #news {
-                        display: none;
-                    }
+                .intro, .hero, .panel-left, .panel-right, .benefits {
+                    padding: 16px;
+                    width: 100%;
+                    margin: 0;
+                    text-align: center;
                 }
 
-                @media screen and (max-width: 768px) {
-                    #container {
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    #hero {
-                        display: block;
-                        padding-top: 10%;
-                    }
-
-                    #links {
-                        flex-wrap: wrap;
-                    }
-
-                    #links a.button {
-                        padding: 14px 18px;
-                    }
-
-                    #news {
-                        right: 16px;
-                        left: 16px;
-                        bottom: 2.5rem;
-                        max-width: 100%;
-                    }
-
-                    h1 {
-                        line-height: 1.5;
-                        font-size: 50px;
-                    }
-
-                    .intro, .hero, .panel-left, .panel-right, .benefits {
-                        padding: 16px;
-                        width: 100%;
-                        margin: 0;
-                        text-align: center;
-                    }
-
-                    .benefit {
-                        width: 100%;
-                    }
-
-                    .benefit h3 {
-                        min-height: auto;
-                    }
-
-                    .benefit p {
-                        min-height: auto;
-                    }
-
-                    .install-card {
-                        width: 90%;
-                        padding: 20px;
-                    }
-
-                    .quick-section-container {
-                        padding: 40px 15px;
-                        margin: 20px 0;
-                    }
-                    
-                    .quick-section-title {
-                        font-size: 36px;
-                        margin-bottom: 30px;
-                    }
-                    
-                    .quick-card {
-                        padding: 20px;
-                    }
-                    
-                    .quick-start-code {
-                        font-size: 16px;
-                    }
+                .benefit {
+                    width: 100%;
                 }
-            </style>
-        </div>
+
+                .benefit h3 {
+                    min-height: auto;
+                }
+
+                .benefit p {
+                    min-height: auto;
+                }
+
+                .install-card {
+                    width: 90%;
+                    padding: 20px;
+                }
+
+                .quick-section-container, .intro-section, .about-section, .open-source-section, .emulators-section {
+                    padding: 40px 15px;
+                    margin: 20px 0;
+                }
+                
+                .quick-section-title {
+                    font-size: 36px;
+                    margin-bottom: 30px;
+                }
+                
+                .quick-card {
+                    padding: 20px;
+                }
+                
+                .quick-start-code {
+                    font-size: 16px;
+                }
+            }
+        </style>
     </main>
 </div>
 
