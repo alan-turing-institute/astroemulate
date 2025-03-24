@@ -53,23 +53,23 @@ import Navbar from "./Navbar.astro";
         </div>
         
         <div class="about-section">
-            <div class="hero">
-                <div class="panel-left">
-                    <img
-                        style="text-align: left;"
-                        width="25%"
-                        src={logo.src}
-                        alt="AutoEmulate Logo"
-                    />
-                    <div style="width: 10%;"></div>
-                    <h3>
-                        <i>AutoEmulate</i> is a Python library for automatically creating
-                        accurate and efficient emulators of complex simulations.
-                        <br /><br />
-                        Run a complete machine learning pipeline to compare and optimise
-                        a wide range of models, with functions for downstream tasks like
-                        prediction, sensitivity analysis and calibration.
-                    </h3>
+            <div class="about-section-inner">
+                <div class="hero">
+                    <div class="panel-left">
+                        <div class="logo-container">
+                            <img src={logo.src} alt="AutoEmulate Logo" />
+                        </div>
+                        <div class="about-text">
+                            <h3>
+                                <i>AutoEmulate</i> is a Python library for automatically creating
+                                accurate and efficient emulators of complex simulations.
+                                <br /><br />
+                                Run a complete machine learning pipeline to compare and optimise
+                                a wide range of models, with functions for downstream tasks like
+                                prediction, sensitivity analysis and calibration.
+                            </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,18 +200,71 @@ import Navbar from "./Navbar.astro";
                 padding: 16px;
                 width: 100%;
                 margin-top: 100px;
+                max-width: 1600px; /* Add max-width to title section */
+                margin-left: auto;
+                margin-right: auto; /* Center the title section */
+            }
+
+            .intro h1 {
+                font-size: 100px;
+                margin-top: 0.25em;
+                padding: 0 20px; /* Add horizontal padding to the title */
+            }
+
+            .intro h2 {
+                color: #4b5563;
+                padding: 0 20px; /* Add horizontal padding to the subtitle */
             }
 
             .intro h2 {
                 color: #4b5563;
             }
 
-            /* About section styling */
+            /* About section responsive improvements */
             .about-section {
                 background: white;
-                padding: 40px 20px;
                 border-radius: 16px;
                 margin: 0;
+                width: 100%;
+            }
+
+            .about-text h3 {
+                font-size: 30px; 
+                line-height: 1.6;
+                color: #4b5563;
+                font-weight: 400;
+            }
+
+            /* Create an inner container to control content width */
+            .about-section-inner {
+                max-width: 1400px; /* Maximum content width */
+                margin-left: auto;
+                margin-right: auto; /* Center the content */
+            }
+            
+            .panel-left {
+                display: flex;
+                align-items: center;
+                max-width: 1200px; /* Limit maximum width */
+                margin: 0 auto; /* Center the content */
+            }
+
+            /* Create a container for the logo to maintain proportions */
+            .logo-container {
+                flex: 0 0 30%; 
+                min-width: 150px; 
+                max-width: 350px; 
+                margin-right: 5%; /* Spacing between logo and text */
+            }
+
+            .logo-container img {
+                width: 100%; /* Make image fill its container */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            .about-text {
+                flex: 1; /* Take remaining space */
+                min-width: 280px; /* Ensure text has room to breathe */
             }
             
             /* Open source section styling */
@@ -305,7 +358,6 @@ import Navbar from "./Navbar.astro";
                 font-size: 20px;
             }
 
-
             #container {
                 font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
                     "Nimbus Sans", Arial, sans-serif;
@@ -324,7 +376,6 @@ import Navbar from "./Navbar.astro";
                 align-items: start;
                 flex-direction: column;
                 justify-content: center;
-                padding: 16px;
             }
 
             .panel-left {
@@ -337,7 +388,6 @@ import Navbar from "./Navbar.astro";
                 display: flex;
                 align-items: right;
                 justify-content: flex-end;
-                /* padding: 50px; */
                 right: 0;
                 text-align: right;
             }
@@ -364,6 +414,7 @@ import Navbar from "./Navbar.astro";
                 margin-bottom: 15px;
                 min-height: 40px;
                 display: flex;
+                color: black;
                 align-items: center;
             }
 
@@ -507,6 +558,23 @@ import Navbar from "./Navbar.astro";
                     padding-top: 10%;
                 }
 
+                .panel-left {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 30px 15px;
+                }
+                
+                .logo-container {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                    width: 50%; /* Slightly larger on small screens */
+                }
+                
+                .about-text h3 {
+                    font-size: 28px;
+                    line-height: 1.4;
+                }
+
                 #links {
                     flex-wrap: wrap;
                 }
@@ -569,6 +637,15 @@ import Navbar from "./Navbar.astro";
                     font-size: 16px;
                 }
             }
+
+            @media screen and (min-width: 1600px) {
+                .about-section {
+                    padding: 60px 40px;
+                }
+                
+                .panel-left {
+                    padding: 60px;
+                }
         </style>
     </main>
 </div>
