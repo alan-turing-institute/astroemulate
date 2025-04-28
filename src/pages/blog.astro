@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 const posts = (await getCollection("blog")).sort(
-    (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
+    (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate),
 );
 import background from "../assets/background.svg";
 import "../styles/global.css";
@@ -22,8 +22,16 @@ import Navbar from "../components/Navbar.astro";
                 {
                     posts.map((post) => (
                         <li class="blog-item">
-                            <a href={`/blog/${post.slug}`} class="blog-link">{post.data.title}</a>
-                            <span class="blog-date">{post.data.pubDate.toLocaleDateString()}</span>
+                            <a href={`/blog/${post.slug}`} class="blog-link">
+                                {post.data.title}
+                            </a>
+                            <span class="blog-description">
+                                {post.data.description}
+                            </span>
+                            <span class="blog-date">
+                                {post.data.pubDate.toLocaleDateString()}
+                            </span>
+                            <span class="blog-author">{post.data.author}</span>
                         </li>
                     ))
                 }

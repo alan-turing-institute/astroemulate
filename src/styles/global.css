@@ -413,6 +413,16 @@ h3.right-text {
     color: #666;
 }
 
+.blog-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.blog-author {
+    font-size: 0.9rem;
+    color: #666666;
+}
+
 @media screen and (max-height: 368px) {
     #news {
         display: none;
