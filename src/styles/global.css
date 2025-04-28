@@ -379,6 +379,40 @@ h3.right-text {
     background: rgba(255, 255, 255, 0.55);
 }
 
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.blog-item {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.blog-link {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.blog-link:hover {
+    text-decoration: underline;
+    color: #005f99;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 @media screen and (max-height: 368px) {
     #news {
         display: none;
