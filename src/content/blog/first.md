@@ -3,7 +3,6 @@ title: "My First Blog Post"
 pubDate: "2025-04-27"
 description: "This is the first post on my blog!"
 author: "Bob Man"
-layout: "../../layouts/BlogLayout.astro"
 ---
 
 # Welcome to My Blog

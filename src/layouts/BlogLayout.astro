@@ -19,9 +19,9 @@ import Navbar from "../components/Navbar.astro";
                     <p><strong>{author}</strong> - {pubDate}</p>
                     <p>{description}</p>
                 </header>
-                <main>
+                <section class="blog-content">
                     <slot />
-                </main>
+                </section>
             </article>
         </div>
     </main>
