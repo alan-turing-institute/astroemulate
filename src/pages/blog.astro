@@ -1,23 +1,42 @@
 ---
 import { getCollection } from "astro:content";
-import Navbar from "../components/Navbar.astro";
-
 const posts = await getCollection("blog");
+import background from "../assets/background.svg";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<html>
-    <body>
+<head>
+    <title>AutoEmulate Blog</title>
+</head>
+
+<div id="container">
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <main>
         <Navbar />
-        <h1>Blog</h1>
-        <ul>
-            {
-                posts.map((post) => (
-                    <li>
-                        <a href={post.url}>{post.data.title}</a> -{" "}
-                        {post.data.pubDate}
-                    </li>
-                ))
-            }
-        </ul>
-    </body>
-</html>
+        <div class="intro">
+            <h1>Blog posts</h1>
+            <ul>
+                {
+                    posts.map((post) => (
+                        <li>
+                            <a href={post.url}>{post.data.title}</a> -{" "}
+                            {post.data.pubDate}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </main>
+</div>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > window.innerHeight / 2) {
+            navbar.classList.add("hidden");
+        } else {
+            navbar.classList.remove("hidden");
+        }
+    });
+</script>
