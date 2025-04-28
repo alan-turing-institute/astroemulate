@@ -1,20 +1,45 @@
 ---
 const { title, pubDate, description, author } = Astro.props;
+import background from "../assets/background.svg";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 ---
+
 <html>
-  <head>
-    <title>{title}</title>
-  </head>
-  <body>
-    <article>
-      <header>
-        <h1>{title}</h1>
-        <p><strong>{author}</strong> - {pubDate}</p>
-        <p>{description}</p>
-      </header>
-      <main>
-        <slot />
-      </main>
-    </article>
-  </body>
+    <head>
+        <title>{title}</title>
+    </head>
+    <body>
+        <div id="container">
+            <img
+                id="background"
+                src={background.src}
+                alt=""
+                fetchpriority="high"
+            />
+            <main>
+                <Navbar />
+                <article>
+                    <header>
+                        <h1>{title}</h1>
+                        <p><strong>{author}</strong> - {pubDate}</p>
+                        <p>{description}</p>
+                    </header>
+                    <main>
+                        <slot />
+                    </main>
+                </article>
+            </main>
+        </div>
+    </body>
 </html>
+<script>
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > window.innerHeight / 2) {
+            navbar.classList.add("hidden");
+        } else {
+            navbar.classList.remove("hidden");
+        }
+    });
+</script>
