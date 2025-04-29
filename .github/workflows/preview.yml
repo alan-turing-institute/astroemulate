@@ -16,8 +16,6 @@ jobs:
         run: npm install
       - name: Build the project
         run: npm run build
-      - name: Debug build output
-        run: ls -R
   deploy-preview:
     needs: build
     runs-on: ubuntu-latest
@@ -25,4 +23,4 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: dist/
+          source-dir: ./dist/
