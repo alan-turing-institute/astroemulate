@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
 import BlogLayout from "../../layouts/BlogLayout.astro";
+import { marked } from "marked";
 
 // Get the slug from the URL
 const { slug } = Astro.params;
@@ -12,6 +13,9 @@ const post = await getEntryBySlug("blog", slug);
 if (!post) {
     throw new Error(`Post not found for slug: ${slug}`);
 }
+
+// Manually render the Markdown content into HTML
+const html = marked(post.body);
 
 // Export getStaticPaths to generate paths for all blog posts
 export async function getStaticPaths() {
@@ -28,5 +32,5 @@ export async function getStaticPaths() {
     description={post.data.description}
     author={post.data.author || "Unknown Author"}
 >
-    <div innerHTML={post.body} />
+    <div set:html={html} />
 </BlogLayout>
