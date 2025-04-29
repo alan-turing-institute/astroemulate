@@ -20,7 +20,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Debug Current Directory
+        run: pwd && ls -R
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./dist/
+          source-dir: ${{ github.workspace }}/dist/
