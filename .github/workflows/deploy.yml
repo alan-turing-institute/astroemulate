@@ -44,3 +44,4 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           preview: true # Enable preview deployment
+          artifact_name: preview-${{ github.run_id }} # Unique artifact name
