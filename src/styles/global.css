@@ -379,6 +379,18 @@ h3.right-text {
     background: rgba(255, 255, 255, 0.55);
 }
 
+.blog {
+    padding: 16px;
+    margin-top: 100px;
+}
+
+.blog h1 {
+    font-size: 70px;
+    margin-top: 0.25em;
+    padding: 0 20px;
+    /* Add horizontal padding to the title */
+}
+
 .blog-list {
     list-style: none;
     padding: 0;
