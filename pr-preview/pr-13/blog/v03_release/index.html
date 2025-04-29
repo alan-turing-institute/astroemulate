@@ -1,0 +1,124 @@
+<!DOCTYPE html><head><title>v0.3 release</title><link rel="stylesheet" href="/_astro/team.SOhWniuS.css"><script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=Object.assign(w[p]||{},{"lib":"/~partytown/","debug":false});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.11.0 - MIT QwikDev */
+const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,l,d,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(d=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(l=setTimeout(v,(null==s?void 0:s.fallbackTimeout)||1e4),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.11.0":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<d.length;n++)(o=r.createElement("script")).innerHTML=d[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(l)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);;(e=>{e.addEventListener("astro:before-swap",e=>{let r=document.body.querySelector("iframe[src*='/~partytown/']");if(r)e.newDocument.body.append(r)})})(document);</script></head> <div id="container"> <img id="background" src="/_astro/background.BPKAcmfN.svg" alt="" fetchpriority="high"> <main> <nav class="navbar" id="navbar" data-astro-cid-5blmo7yk> <a href="/" style="color: inherit; text-decoration: none;" data-astro-cid-5blmo7yk> <img src="/_astro/autoemulate_logo_no_grid.C5MLkt-6.png" width="100" alt="AutoEmulate Logo" data-astro-cid-5blmo7yk> <sub class="navbar-logo-text" data-astro-cid-5blmo7yk><b data-astro-cid-5blmo7yk>utoEmulate</b></sub> </a> <div class="navbar-right" data-astro-cid-5blmo7yk> <a href="https://alan-turing-institute.github.io/autoemulate/index.html" target="_blank" data-astro-cid-5blmo7yk>Documentation</a> <a href="https://joss.theoj.org/papers/10.21105/joss.07626" target="_blank" data-astro-cid-5blmo7yk>JOSS Paper</a> <a href="https://github.com/alan-turing-institute/autoemulate" target="_blank" data-astro-cid-5blmo7yk>GitHub</a> <a href="/team" data-astro-cid-5blmo7yk>Who we are</a> <a href="https://alan-turing-institute.github.io/gp-demo/" target="_blank" data-astro-cid-5blmo7yk>What is emulation?</a> <a href="/blog" data-astro-cid-5blmo7yk>Blog</a> </div> </nav>  <script type="module">window.addEventListener("scroll",function(){const n=document.getElementById("navbar");window.scrollY>window.innerHeight/2?n.classList.add("hidden"):n.classList.remove("hidden")});</script> <div class="blog"> <article> <header> <h1>v0.3 release</h1> <p><strong>AutoEmulate contributors</strong> - 4/29/2025</p> <p>Blog to accompany v0.3 release</p> </header> <section class="blog-content">  <div><p>We&#39;re excited to announce the progress on AutoEmulate in this v0.3.0 release -- we&#39;ve added several exciting new features advancing the package as an all-purpose emulation toolkit, as well as adding several new tutorials demonstrating the package in action. In the two sections below we look back at &quot;What&#39;s new&quot; before looking ahead to &quot;What&#39;s next&quot; in the upcoming cycle.</p>
+<ul>
+<li><a href="">What&#39;s new</a><ul>
+<li><a href="">History matching</a></li>
+<li><a href="">Dimensionality reduction</a></li>
+<li><a href="">Active learning (experimental)</a></li>
+<li><a href="">End-to-end workflow example with a user-provided simulator</a></li>
+</ul>
+</li>
+<li><a href="">What&#39;s next</a></li>
+</ul>
+<h2>What&#39;s new</h2>
+<h3>History matching:</h3>
+<ul>
+<li>One of the commonly used techniques in emulation for model calibration is &quot;History Matching&quot;. </li>
+<li>This technique aims to redefine the parameter space so that the predictions from the emulator are best representative of real observations.</li>
+<li>This is done by iteratively ruling out regions of the parameter space that are implausible according to observed values.</li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/ry8dq7T1gx.png" alt="image_720"></p>
+<ul>
+<li>This <a href="https://alan-turing-institute.github.io/autoemulate/tutorials/01_start.html#history-matching">tutorial</a> demonstrates how users can employ their own simulator in AutoEmulate&#39;s framework. Furthermore it elaborates on the  use of calibration and analysis tools as well adding a visualisation dashboard as a part of AutoEmulate package.</li>
+</ul>
+<h3>Dimensionality reduction</h3>
+<ul>
+<li>To accelerate large-scale simulations, AutoEmulate must address the challenge of high-dimensional data. In this new release, we have integrated <strong>dimensionality reduction</strong> techniques into the framework, including both statistical methods like <strong>Principal Component Analysis (PCA)</strong> and deep learning approaches such as <strong>Variational Autoencoders (VAEs)</strong>.</li>
+<li>AutoEmulate automatically selects the best combination of dimensionality reducer (preprocessing) and predictive model (model) to deliver the best performance, enabling a seamless transformation of your data and advancing toward full auto-emulation of your simulations.</li>
+</ul>
+<table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>preprocessing</th>
+          <th>model</th>
+          <th>short</th>
+          <th>rmse</th>
+          <th>r2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border: 3px solid red;">
+          <th>1</th>
+          <td>PCA</td>
+          <td>GaussianProcess</td>
+          <td>gp</td>
+          <td>0.133731</td>
+          <td>0.950240</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>VAE</td>
+          <td>GaussianProcess</td>
+          <td>gp</td>
+          <td>0.148129</td>
+          <td>0.930782</td>
+        </tr>   
+        <tr>
+          <th>3</th>
+          <td>VAE</td>
+          <td>ConditionalNeuralProcess</td>
+          <td>cnp</td>
+          <td>0.333605</td>
+          <td>0.666806</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>PCA</td>
+          <td>RandomForest</td>
+          <td>rf</td>
+          <td>0.369583</td>
+          <td>0.657539</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>VAE</td>
+          <td>GradientBoosting</td>
+          <td>gb</td>
+          <td>0.376103</td>
+          <td>0.645977</td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td>VAE</td>
+          <td>RadialBasisFunctions</td>
+          <td>rbf</td>
+          <td>0.336832</td>
+          <td>0.643328</td>
+        </tr>
+        <tr>
+          <th>...</th>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+      </tbody>
+    </table>
+    
+<ul>
+<li>Physical simulations often rely on spatio-temporal data with complex, high-dimensional structures. To showcase AutoEmulate’s capabilities, we developed a <a href="https://alan-turing-institute.github.io/autoemulate/tutorials/05_reaction_diffusion.html">tutorial</a> on constructing an emulator that generates solutions for a reaction-diffusion system governed by parametrized partial differential equations (PDEs).
+In this example, AutoEmulate selects the optimal combination of dimensionality reduction technique and predictive model to efficiently explore and generate new spatial solutions for different values of the reaction and diffusion coefficients.
+<img src="https://raw.githubusercontent.com/alan-turing-institute/autoemulate/Preprocessing/misc/reaction_diffusion_test_param0.gif" alt=""></li>
+</ul>
+<!-- Check out the [reaction-diffusion tutorial](https://alan-turing-institute.github.io/autoemulate/tutorials/05_reaction_diffusion.html) to see AutoEmulate in action and watch how it predicts complex spatial patterns in real time! -->
+
+<h3>Active learning (experimental)</h3>
+<ul>
+<li>Physics simulations can be quite accurate but also quite costly. Emulators offer fast approximations to simulations, but only in situations they&#39;ve been &quot;trained&quot; on. Active learning is the processes of efficiently requesting data points from a simulation (to save time and money) to train the emulator on (to maximise its accuracy).</li>
+<li>Check out our <a href="https://github.com/alan-turing-institute/autoemulate/blob/main/docs/tutorials/04_active_learning.ipynb">active learning tutorial notebook</a>, where we demonstrate several different active learning algorithms.</li>
+<li>A simulator can be seen as a function mapping from inputs x to outputs y, and an emulator mapping from inputs x to <em>approximated</em> outputs ŷ. We want ŷ to be as close as possible to y. See the schematic below for a basic active learning process.</li>
+<li>Schematic <img src="https://raw.githubusercontent.com/alan-turing-institute/autoemulate/refs/heads/main/docs/img/sal_schematic.svg" alt=""></li>
+</ul>
+<h3>End-to-end workflow example with a user-provided simulator</h3>
+<p>In this example we demonstrate the simplicity of setting up an end-to-end workflow which trains and calibrates an emulator for a simulator provided by the user. </p>
+<p><img src="https://raw.githubusercontent.com/alan-turing-institute/autoemulate/dac07678bc9eefc51ebbcc911a216a1297721f02/misc/workflow.png" alt=""></p>
+<h2>What&#39;s next</h2>
+<p>We are always working on extending AutoEmulate to handle a wider range of use cases. Our next development goals focus on:</p>
+<ul>
+<li>Introducing <strong>more complex models</strong>. This includes more types of Gaussian Processes and adding ensemble methods as well as support for multimodal and multifidelity data. </li>
+<li><strong>Expanding downstream task capabilities</strong> (e.g., uncertainty quantification, data assimilation, inverse design, optimal sensor placement) by adding in-built tools for typical emulation workflows, alongside a PyTorch backend refactor to enable seamless integration with other tools in the broader ecosystem. </li>
+<li>Continuing development of the active learning functionality, aiming to integrate it into the main release, to facilitate <strong>simulator-in-the-loop</strong> deployments.</li>
+</ul>
+</div>  </section> </article> </div> </main> <script type="module">window.addEventListener("scroll",function(){const n=document.getElementById("navbar");window.scrollY>window.innerHeight/2?n.classList.add("hidden"):n.classList.remove("hidden")});</script> </div>
