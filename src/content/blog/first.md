@@ -7,6 +7,9 @@ author: "Bob Man"
 
 This is the content of my first blog post. You can write in Markdown and Astro will render it as HTML.
 
+This is how regular text looks.
+
+
 - Hello
 - World
 - This
@@ -18,10 +21,7 @@ This is the content of my first blog post. You can write in Markdown and Astro w
 2. Second
 3. Third
 
-## Sub heading
+## H2 heading
 
-ergergerg
 
-### Sub sub heading
-
-rbsetrert
+### H3 heading

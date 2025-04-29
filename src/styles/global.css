@@ -391,6 +391,26 @@ h3.right-text {
     /* Add horizontal padding to the title */
 }
 
+.blog h2 {
+    font-size: 50px;
+    margin-top: 0.25em;
+    padding: 0 20px;
+    /* Add horizontal padding to the title */
+}
+
+.blog h3 {
+    font-size: 30px;
+    margin-top: 0.25em;
+        padding: 0 20px;
+        /* Add horizontal padding to the title */
+}
+
+.blog header {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 .blog-list {
     list-style: none;
     padding: 0;

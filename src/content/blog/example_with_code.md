@@ -12,7 +12,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praes
         return f"Hello, {name}!"
 ```
 
-### Part 2
+## Part 2
 
 Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Here’s another example showcasing a loop:
 
