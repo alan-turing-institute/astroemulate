@@ -5,6 +5,23 @@ description: "This is the first post on my blog!"
 author: "Bob Man"
 ---
 
-# Welcome to My Blog
-
 This is the content of my first blog post. You can write in Markdown and Astro will render it as HTML.
+
+- Hello
+- World
+- This
+- Is
+- A
+- List
+
+1. First
+2. Second
+3. Third
+
+## Sub heading
+
+ergergerg
+
+### Sub sub heading
+
+rbsetrert
