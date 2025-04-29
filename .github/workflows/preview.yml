@@ -16,8 +16,6 @@ jobs:
         uses: withastro/action@v3
       - name: Debug Current Directory
         run: pwd && ls -R
-      - name: Debug build output
-        run: ls -R
   deploy-preview:
     needs: build
     runs-on: ubuntu-latest
@@ -27,4 +25,4 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ${{ github.workspace }}/dist/
+          source-dir: ./dist/
