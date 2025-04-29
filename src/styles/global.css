@@ -472,6 +472,9 @@ h3.right-text {
 .blog-content code {
     font-family: "Courier New", Courier, monospace;
     color: #d6336c;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
 }
 
 @media screen and (max-height: 368px) {
