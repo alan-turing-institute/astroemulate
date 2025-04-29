@@ -41,11 +41,14 @@
 </style>
 
 <script>
-	const isGithubPreview = window.location.hostname.includes("github.io");
 	const isPRPreview = window.location.pathname.includes("/pr-preview/");
 
-	if (!(isGithubPreview && isPRPreview)) {
+	// Redirect back to the GitHub domain if it's a PR preview
+	if (isPRPreview) {
+		// Get the end part of the pathname after https://www.autoemulate.com/pr-preview/
+		const pr = window.location.pathname.split("/pr-preview/")[1];
 		window.location.href =
-			"https://www.autoemulate.com" + window.location.pathname;
+			"https://alan-turing-institute.github.io/astroemulate/" +
+			pr;
 	}
 </script>
