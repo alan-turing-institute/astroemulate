@@ -14,12 +14,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v3
+      - name: pwd
+        run: pwd
       - name: Show dist Directory
         run: ls ./dist
   deploy-preview:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: pwd
+        run: pwd
       - name: Show dist Directory
         run: ls ./dist
       - name: Deploy preview
