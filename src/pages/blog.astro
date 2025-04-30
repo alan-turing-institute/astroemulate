@@ -21,22 +21,22 @@ import Navbar from "../components/Navbar.astro";
             <div class="blog-cards">
                 {
                     posts.map((post) => (
-                        <div class="blog-card">
-                            <a href={`/blog/${post.slug}`} class="blog-card-link">
+                        <a href={`/blog/${post.slug}`} class="blog-card-link">
+                            <div class="blog-card">
                                 <h2 class="blog-card-title">{post.data.title}</h2>
-                            </a>
-                            <p class="blog-card-description">
-                                {post.data.description}
-                            </p>
-                            <div class="blog-card-footer">
-                                <span class="blog-card-date">
-                                    {post.data.pubDate.toLocaleDateString()}
-                                </span>
-                                <span class="blog-card-author">
-                                    {post.data.author}
-                                </span>
+                                <p class="blog-card-description">
+                                    {post.data.description}
+                                </p>
+                                <div class="blog-card-footer">
+                                    <span class="blog-card-date">
+                                        {post.data.pubDate.toLocaleDateString()}
+                                    </span>
+                                    <span class="blog-card-author">
+                                        {post.data.author}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     ))
                 }
             </div>

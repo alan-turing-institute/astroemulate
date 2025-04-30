@@ -478,10 +478,12 @@ h3.right-text {
 }
 
 .blog-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
     margin-top: 2rem;
+    align-items: center;
+    width: 100%;
 }
 
 .blog-card {
@@ -490,6 +492,9 @@ h3.right-text {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 600px;
+    margin: auto;
+    cursor: pointer;
 }
 
 .blog-card:hover {
@@ -499,7 +504,8 @@ h3.right-text {
 
 .blog-card-link {
     text-decoration: none;
-    color: #333;
+    color: inherit;
+    display: block;
 }
 
 .blog-card-title {
