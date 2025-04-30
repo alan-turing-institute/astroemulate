@@ -404,16 +404,14 @@ h3.right-text {
 
 .blog h2 {
     font-size: 50px;
-    margin-top: 0.25em;
-    padding: 0 20px;
+    margin: 0.5em 0 0;
     /* Add horizontal padding to the title */
 }
 
 .blog h3 {
     font-size: 30px;
-    margin-top: 0.25em;
-        padding: 0 20px;
-        /* Add horizontal padding to the title */
+    margin: 0.5em 0 0;
+    /* Add horizontal padding to the title */
 }
 
 .blog header {
