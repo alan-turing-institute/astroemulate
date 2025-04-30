@@ -486,6 +486,26 @@ h3.right-text {
 
 }
 
+.blog-content table {
+    margin: 1rem auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.blog-content table th,
+.blog-content table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+}
+
+.blog-content table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+}
+
 .blog-content pre {
     background-color: #f4f4f4;
     padding: 1rem;
