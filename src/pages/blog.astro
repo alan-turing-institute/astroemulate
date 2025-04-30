@@ -6,6 +6,7 @@ const posts = (await getCollection("blog")).sort(
 import background from "../assets/background.svg";
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
+import autoemulateLogo from "../assets/autoemulate_logo_no_grid.png";
 ---
 
 <head>
@@ -23,7 +24,15 @@ import Navbar from "../components/Navbar.astro";
                     posts.map((post) => (
                         <a href={`/blog/${post.slug}`} class="blog-card-link">
                             <div class="blog-card">
-                                <h2 class="blog-card-title">{post.data.title}</h2>
+                                <div class="blog-card-image">
+                                    <img
+                                        src={autoemulateLogo.src}
+                                        alt="AutoEmulate Logo"
+                                    />
+                                </div>
+                                <h2 class="blog-card-title">
+                                    {post.data.title}
+                                </h2>
                                 <p class="blog-card-description">
                                     {post.data.description}
                                 </p>
