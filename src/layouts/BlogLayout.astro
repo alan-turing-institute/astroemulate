@@ -13,11 +13,13 @@ import Navbar from "../components/Navbar.astro";
     <main>
         <Navbar />
         <div class="blog">
-            <article>
-                <header>
+            <article class="blog-article">
+                <header class="blog-header">
                     <h1>{title}</h1>
-                    <p><strong>{author}</strong> - {pubDate}</p>
-                    <p>{description}</p>
+                    <p class="blog-meta">
+                        <strong>{author}</strong> - {pubDate}
+                    </p>
+                    <p class="blog-description">{description}</p>
                 </header>
                 <section class="blog-content">
                     <slot />
