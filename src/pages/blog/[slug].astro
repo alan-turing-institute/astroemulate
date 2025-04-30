@@ -21,19 +21,7 @@ const tocContent = toc(post.body).content;
 // Combine the TOC with the original Markdown content
 const markdownWithToc = `${tocContent}\n\n${post.body}`;
 
-// Customize the marked renderer to add IDs to headers
-const renderer = new marked.Renderer();
-renderer.heading = (text, level) => {
-    // Ensure `text` is extracted properly
-    const content = typeof text === "string" ? text : text?.text || text?.raw || String(text || "");
-    const slug = content.toLowerCase().replace(/[^\w]+/g, "-"); // Generate slug
-    const headingLevel = level || 1; // Default to <h1> if `level` is undefined
-    const formattedContent = marked.parseInline(content); // Parse the content to retain formatting
-    return `<h${headingLevel} id="${slug}">${formattedContent}</h${headingLevel}>`; // Use the correct heading level
-};
-
 // Render the Markdown content (with TOC) into HTML
-marked.setOptions({ renderer });
 const html = marked(markdownWithToc);
 
 // Export getStaticPaths to generate paths for all blog posts
