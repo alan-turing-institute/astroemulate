@@ -10,15 +10,15 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 <li><a href="#whats-next">What&#39;s next</a></li>
 </ul>
 <p>We&#39;re excited to announce the progress on AutoEmulate in this v0.3.0 release -- we&#39;ve added several exciting new features advancing the package as an all-purpose emulation toolkit, as well as adding several new tutorials demonstrating the package in action. In the two sections below we look back at &quot;What&#39;s new&quot; before looking ahead to &quot;What&#39;s next&quot; in the upcoming cycle.</p>
-<h2>What&#39;s new</h2>
-<h3>History matching</h3>
+<h2 id="what39s-new">What&#39;s new</h2>
+<h3 id="history-matching">History matching</h3>
 <ul>
 <li>One of the commonly used techniques in emulation for model calibration is &quot;History Matching&quot;. </li>
 <li>This technique aims to redefine the parameter space so that the predictions from the emulator are best representative of real observations.</li>
 <li>This is done by iteratively ruling out regions of the parameter space that are implausible according to observed values.</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/alan-turing-institute/autoemulate/99d32b3d5a1d353c1f9711c3400ad1ba528ccc62/misc/history_matching_workflow.png" alt=""></p>
-<h3>Dimensionality reduction</h3>
+<h3 id="dimensionality-reduction">Dimensionality reduction</h3>
 <ul>
 <li>To accelerate large-scale simulations, AutoEmulate must address the challenge of high-dimensional data. In this new release, we have integrated <strong>dimensionality reduction</strong> techniques into the framework, including both statistical methods like <strong>Principal Component Analysis (PCA)</strong> and deep learning approaches such as <strong>Variational Autoencoders (VAEs)</strong>.</li>
 <li>AutoEmulate automatically selects the best combination of dimensionality reducer (preprocessing) and predictive model (model) to deliver the best performance, enabling a seamless transformation of your data and advancing toward full auto-emulation of your simulations.</li>
@@ -101,17 +101,17 @@ In this example, AutoEmulate selects the optimal combination of dimensionality r
 </ul>
 <!-- Check out the [reaction-diffusion tutorial](https://alan-turing-institute.github.io/autoemulate/tutorials/05_reaction_diffusion.html) to see AutoEmulate in action and watch how it predicts complex spatial patterns in real time! -->
 
-<h3>Active learning (experimental)</h3>
+<h3 id="active-learning-experimental">Active learning (experimental)</h3>
 <ul>
 <li>Physics simulations can be quite accurate but also quite costly. Emulators offer fast approximations to simulations, but only in situations they&#39;ve been &quot;trained&quot; on. Active learning is the processes of efficiently requesting data points from a simulation (to save time and money) to train the emulator on (to maximise its accuracy).</li>
 <li>Check out our <a href="https://github.com/alan-turing-institute/autoemulate/blob/main/docs/tutorials/04_active_learning.ipynb">active learning tutorial notebook</a>, where we demonstrate several different active learning algorithms.</li>
 <li>A simulator can be seen as a function mapping from inputs x to outputs y, and an emulator mapping from inputs x to <em>approximated</em> outputs ŷ. We want ŷ to be as close as possible to y. See the schematic below for a basic active learning process.</li>
 <li>Schematic <img src="https://raw.githubusercontent.com/alan-turing-institute/autoemulate/refs/heads/main/docs/img/sal_schematic.svg" alt=""></li>
 </ul>
-<h3>End-to-end workflow example with a user-provided simulator</h3>
+<h3 id="end-to-end-workflow-example-with-a-user-provided-simulator">End-to-end workflow example with a user-provided simulator</h3>
 <p>In this example we demonstrate the simplicity of setting up an end-to-end workflow which trains and calibrates an emulator for a simulator provided by the user. </p>
 <p><img src="https://raw.githubusercontent.com/alan-turing-institute/autoemulate/dac07678bc9eefc51ebbcc911a216a1297721f02/misc/workflow.png" alt=""></p>
-<h2>What&#39;s next</h2>
+<h2 id="what39s-next">What&#39;s next</h2>
 <p>We are always working on extending AutoEmulate to handle a wider range of use cases. Our next development goals focus on:</p>
 <ul>
 <li>Introducing <strong>more complex models</strong>. This includes more types of Gaussian Processes and adding ensemble methods as well as support for multimodal and multifidelity data. </li>
