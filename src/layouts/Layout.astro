@@ -1,19 +1,31 @@
 <!doctype html>
 <html lang="en">
-    <!-- Thumbnail when sharing site -->
-    <meta property="og:title" content="Accelerating large-scale simulations with AI" />
-    <meta property="og:description" content="Python library for automatically creating accurate and efficient emulators of complex simulations." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/alan-turing-institute/astroemulate/refs/heads/main/src/assets/autoemulate_logo_wide.png" />
-    <meta property="og:url" content="https://www.autoemulate.com" />
-    <meta property="og:type" content="website" />
+	<!-- Thumbnail when sharing site -->
+	<meta
+		property="og:title"
+		content="Accelerating large-scale simulations with AI"
+	/>
+	<meta
+		property="og:description"
+		content="Python library for automatically creating accurate and efficient emulators of complex simulations."
+	/>
+	<meta
+		property="og:image"
+		content="https://raw.githubusercontent.com/alan-turing-institute/astroemulate/refs/heads/main/src/assets/autoemulate_logo_wide.png"
+	/>
+	<meta property="og:url" content="https://www.autoemulate.com" />
+	<meta property="og:type" content="website" />
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/alan-turing-institute/astroemulate/refs/heads/main/src/assets/autoemulate_logo_no_grid.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Autoemulate</title>
-	</head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link
+		rel="icon"
+		type="image/png"
+		href="https://raw.githubusercontent.com/alan-turing-institute/astroemulate/refs/heads/main/src/assets/autoemulate_logo_no_grid.png"
+	/>
+	<meta name="generator" content={Astro.generator} />
+	<title>Autoemulate</title>
+
 	<body>
 		<slot />
 	</body>
@@ -27,3 +39,16 @@
 		height: 100%;
 	}
 </style>
+
+<!-- <script>
+	const isPRPreview = window.location.pathname.includes("/pr-preview/");
+
+	// Redirect back to the GitHub domain if it's a PR preview
+	if (isPRPreview) {
+		// Get the end part of the pathname after https://www.autoemulate.com/pr-preview/
+		const pr = window.location.pathname.split("/pr-preview/")[1];
+		window.location.href =
+			"https://alan-turing-institute.github.io/astroemulate/" +
+			pr;
+	}
+</script> -->

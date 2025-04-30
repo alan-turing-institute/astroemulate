@@ -1,0 +1,71 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
+import { marked } from "marked";
+import toc from "markdown-toc";
+
+// Get the slug from the URL
+const { slug } = Astro.params;
+
+// Fetch the blog post by slug
+const post = await getEntryBySlug("blog", slug);
+
+// If the post is not found, throw a 404 error
+if (!post) {
+    throw new Error(`Post not found for slug: ${slug}`);
+}
+
+// Generate the Table of Contents
+const tocContent = toc(post.body).content;
+
+// Combine the TOC with the original Markdown content
+const markdownWithToc = `${tocContent}\n\n${post.body}`;
+
+// Render the Markdown content (with TOC) into HTML
+const html = marked(markdownWithToc);
+
+// Manually add header ids to the rendered HTML
+const tocHtml = toc(markdownWithToc, { bullets: "-*" }).json;
+const headers = tocHtml.map((header) => {
+    const id = header.content
+        .toLowerCase()
+        .replace(/['"]/g, "") // Remove apostrophes and quotes
+        .replace(/\s+/g, "-") // Replace spaces with hyphens
+        .replace(/[^\w-]/g, ""); // Remove non-alphanumeric characters except hyphens
+    return `<a href="#${id}">${header.content}</a>`;
+});
+const tocHtmlString = `<ul>${headers.join("")}</ul>`;
+const htmlWithIds = html.replace(
+    /<h([1-6])>(.*?)<\/h\1>/g,
+    (match, level, content) => {
+        const id = content
+            .toLowerCase()
+            .replace(/['"]/g, "") // Remove apostrophes and quotes
+            .replace(/\s+/g, "-") // Replace spaces with hyphens
+            .replace(/[^\w-]/g, "") // Remove non-alphanumeric characters except hyphens
+            .replace(/39/g, ""); // Remove HTML entities
+        return `<h${level} id="${id}">${content}</h${level}>`;
+    },
+);
+
+// Set the HTML content with the TOC
+const htmlWithToc = htmlWithIds.replace(/<h1>/, `<h1>${tocHtmlString}`);
+
+// Export getStaticPaths to generate paths for all blog posts
+export async function getStaticPaths() {
+    const posts = await getCollection("blog");
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+    }));
+}
+---
+
+<BlogLayout
+    title={post.data.title}
+    pubDate={post.data.pubDate.toLocaleDateString()}
+    description={post.data.description}
+    author={post.data.author || "Unknown Author"}
+    release={post.data.release || ""}
+>
+    <div set:html={htmlWithToc} />
+</BlogLayout>

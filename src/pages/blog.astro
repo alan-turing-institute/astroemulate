@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+const posts = (await getCollection("blog")).sort(
+    (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate),
+);
+import background from "../assets/background.svg";
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import autoemulateLogo from "../assets/autoemulate_logo_no_grid.png";
+---
+
+<head>
+    <title>AutoEmulate Blog</title>
+</head>
+
+<div id="container">
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <main>
+        <Navbar />
+        <div class="intro">
+            <h1>Blog posts</h1>
+            <div class="blog-cards">
+                {
+                    posts.map((post) => (
+                        <a href={`/blog/${post.slug}`} class="blog-card-link">
+                            <div class="blog-card">
+                                <div class="blog-card-image">
+                                    <img
+                                        src={autoemulateLogo.src}
+                                        alt="AutoEmulate Logo"
+                                    />
+                                </div>
+                                <h2 class="blog-card-title">
+                                    {post.data.title}
+                                </h2>
+                                <p class="blog-card-description">
+                                    {post.data.description}
+                                </p>
+                                <div class="blog-card-footer">
+                                    <span class="blog-card-date">
+                                        {post.data.pubDate.toLocaleDateString()}
+                                    </span>
+                                    <span class="blog-card-author">
+                                        {post.data.author}
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > window.innerHeight / 2) {
+            navbar.classList.add("hidden");
+        } else {
+            navbar.classList.remove("hidden");
+        }
+    });
+</script>

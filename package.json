@@ -9,7 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.2.5",
     "@astrojs/partytown": "^2.1.4",
-    "astro": "^5.4.2"
+    "astro": "^5.4.2",
+    "markdown-toc": "^1.2.0",
+    "marked": "^15.0.11"
   }
 }
