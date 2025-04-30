@@ -24,6 +24,24 @@ const markdownWithToc = `${tocContent}\n\n${post.body}`;
 // Render the Markdown content (with TOC) into HTML
 const html = marked(markdownWithToc);
 
+// Manually add header ids to the rendered HTML
+const tocHtml = toc(markdownWithToc, { bullets: "-*" }).json;
+const headers = tocHtml.map((header) => {
+    const id = header.content.toLowerCase().replace(/\s+/g, "-");
+    return `<a href="#${id}">${header.content}</a>`;
+});
+const tocHtmlString = `<ul>${headers.join("")}</ul>`;
+const htmlWithIds = html.replace(
+    /<h([1-6])>(.*?)<\/h\1>/g,
+    (match, level, content) => {
+        const id = content.toLowerCase().replace(/\s+/g, "-");
+        return `<h${level} id="${id}">${content}</h${level}>`;
+    },
+);
+
+// Set the HTML content with the TOC
+const htmlWithToc = htmlWithIds.replace(/<h1>/, `<h1>${tocHtmlString}`);
+
 // Export getStaticPaths to generate paths for all blog posts
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -40,5 +58,5 @@ export async function getStaticPaths() {
     author={post.data.author || "Unknown Author"}
     release={post.data.release || ""}
 >
-    <div set:html={html} />
+    <div set:html={htmlWithToc} />
 </BlogLayout>
