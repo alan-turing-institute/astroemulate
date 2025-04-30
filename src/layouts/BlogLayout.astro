@@ -1,5 +1,5 @@
 ---
-const { title, pubDate, description, author } = Astro.props;
+const { title, pubDate, description, author, release } = Astro.props;
 import background from "../assets/background.svg";
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
@@ -20,6 +20,22 @@ import Navbar from "../components/Navbar.astro";
                         <strong>{author}</strong> - {pubDate}
                     </p><br /><br />
                     <p class="blog-description">{description}</p>
+                    {
+                        release && (
+                            <>
+                                <br />
+                                <br />
+                                <p class="blog-release">
+                                    <strong>Release:</strong>
+                                    <a
+                                        href={`https://github.com/alan-turing-institute/autoemulate/releases/tag/${release}`}
+                                    >
+                                        {release}
+                                    </a>
+                                </p>
+                            </>
+                        )
+                    }
                 </header>
                 <section class="blog-content">
                     <slot />

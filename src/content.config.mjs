@@ -6,6 +6,7 @@ const blog = defineCollection({
         pubDate: z.preprocess((val) => new Date(val), z.date()),
         description: z.string().optional(),
         author: z.string().optional(),
+        release: z.string().optional(),
     }),
 });
 

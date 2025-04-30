@@ -31,6 +31,7 @@ export async function getStaticPaths() {
     pubDate={post.data.pubDate.toLocaleDateString()}
     description={post.data.description}
     author={post.data.author || "Unknown Author"}
+    release={post.data.release || ""}
 >
     <div set:html={html} />
 </BlogLayout>
