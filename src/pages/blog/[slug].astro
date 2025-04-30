@@ -27,14 +27,20 @@ const html = marked(markdownWithToc);
 // Manually add header ids to the rendered HTML
 const tocHtml = toc(markdownWithToc, { bullets: "-*" }).json;
 const headers = tocHtml.map((header) => {
-    const id = header.content.toLowerCase().replace(/\s+/g, "-");
+    const id = header.content
+        .toLowerCase()
+        .replace(/\s+/g, "-") // Replace spaces with hyphens
+        .replace(/[^\w-]/g, ""); // Remove non-alphanumeric characters except hyphens
     return `<a href="#${id}">${header.content}</a>`;
 });
 const tocHtmlString = `<ul>${headers.join("")}</ul>`;
 const htmlWithIds = html.replace(
     /<h([1-6])>(.*?)<\/h\1>/g,
     (match, level, content) => {
-        const id = content.toLowerCase().replace(/\s+/g, "-");
+        const id = content
+            .toLowerCase()
+            .replace(/\s+/g, "-") // Replace spaces with hyphens
+            .replace(/[^\w-]/g, ""); // Remove non-alphanumeric characters except hyphens
         return `<h${level} id="${id}">${content}</h${level}>`;
     },
 );
