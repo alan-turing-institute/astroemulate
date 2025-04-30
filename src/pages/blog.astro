@@ -18,24 +18,28 @@ import Navbar from "../components/Navbar.astro";
         <Navbar />
         <div class="intro">
             <h1>Blog posts</h1>
-            <ul class="blog-list">
+            <div class="blog-cards">
                 {
                     posts.map((post) => (
-                        <li class="blog-item">
-                            <a href={`/blog/${post.slug}`} class="blog-link">
-                                {post.data.title}
+                        <div class="blog-card">
+                            <a href={`/blog/${post.slug}`} class="blog-card-link">
+                                <h2 class="blog-card-title">{post.data.title}</h2>
                             </a>
-                            <span class="blog-description">
+                            <p class="blog-card-description">
                                 {post.data.description}
-                            </span>
-                            <span class="blog-date">
-                                {post.data.pubDate.toLocaleDateString()}
-                            </span>
-                            <span class="blog-author">{post.data.author}</span>
-                        </li>
+                            </p>
+                            <div class="blog-card-footer">
+                                <span class="blog-card-date">
+                                    {post.data.pubDate.toLocaleDateString()}
+                                </span>
+                                <span class="blog-card-author">
+                                    {post.data.author}
+                                </span>
+                            </div>
+                        </div>
                     ))
                 }
-            </ul>
+            </div>
         </div>
     </main>
 </div>
