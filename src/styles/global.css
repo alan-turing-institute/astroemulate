@@ -414,6 +414,10 @@ h3.right-text {
     /* Add horizontal padding to the title */
 }
 
+.blog p {
+    all: unset;  /* Reset all styles to default */
+}
+
 .blog header {
     justify-content: center;
     text-align: center;
