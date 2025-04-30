@@ -29,6 +29,7 @@ const tocHtml = toc(markdownWithToc, { bullets: "-*" }).json;
 const headers = tocHtml.map((header) => {
     const id = header.content
         .toLowerCase()
+        .replace(/['"]/g, "") // Remove apostrophes and quotes
         .replace(/\s+/g, "-") // Replace spaces with hyphens
         .replace(/[^\w-]/g, ""); // Remove non-alphanumeric characters except hyphens
     return `<a href="#${id}">${header.content}</a>`;
@@ -39,8 +40,10 @@ const htmlWithIds = html.replace(
     (match, level, content) => {
         const id = content
             .toLowerCase()
+            .replace(/['"]/g, "") // Remove apostrophes and quotes
             .replace(/\s+/g, "-") // Replace spaces with hyphens
-            .replace(/[^\w-]/g, ""); // Remove non-alphanumeric characters except hyphens
+            .replace(/[^\w-]/g, "") // Remove non-alphanumeric characters except hyphens
+            .replace(/39/g, ""); // Remove HTML entities
         return `<h${level} id="${id}">${content}</h${level}>`;
     },
 );
