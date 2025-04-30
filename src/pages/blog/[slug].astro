@@ -2,6 +2,7 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import BlogLayout from "../../layouts/BlogLayout.astro";
 import { marked } from "marked";
+import toc from "markdown-toc";
 
 // Get the slug from the URL
 const { slug } = Astro.params;
@@ -14,8 +15,14 @@ if (!post) {
     throw new Error(`Post not found for slug: ${slug}`);
 }
 
-// Manually render the Markdown content into HTML
-const html = marked(post.body);
+// Generate the Table of Contents
+const tocContent = toc(post.body).content;
+
+// Combine the TOC with the original Markdown content
+const markdownWithToc = `${tocContent}\n\n${post.body}`;
+
+// Render the Markdown content (with TOC) into HTML
+const html = marked(markdownWithToc);
 
 // Export getStaticPaths to generate paths for all blog posts
 export async function getStaticPaths() {
