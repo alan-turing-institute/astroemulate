@@ -1,3 +1,10 @@
+/* Ensure all elements respect box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 h3 {
     font-size: 30px;
     line-height: 1.6;
