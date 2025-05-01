@@ -206,6 +206,9 @@ h3 {
     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
         "Nimbus Sans", Arial, sans-serif;
     height: 100%;
+    position: relative;
+    overflow: auto;
+    height: auto;
 }
 
 main {
