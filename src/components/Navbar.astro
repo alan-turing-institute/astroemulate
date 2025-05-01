@@ -3,11 +3,19 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
 ---
 
 <nav class="navbar" id="navbar">
-    <a href="/" style="color: inherit; text-decoration: none;">
+    <a
+        class="homelink desktop-only"
+        href="/"
+        style="color: inherit; text-decoration: none;"
+    >
         <img src={logo.src} width="100" alt="AutoEmulate Logo" />
         <sub class="navbar-logo-text"><b>utoEmulate</b></sub>
     </a>
-    <div class="navbar-right">
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        &#9776;
+    </button>
+    <div class="navbar-right" id="navbar-right">
+        <a class="mobile-only" href="/">Home</a>
         <a
             href="https://alan-turing-institute.github.io/autoemulate/index.html"
             target="_blank">Documentation</a
@@ -26,7 +34,6 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
             target="_blank">What is emulation?</a
         >
         <a href="/blog">Blog</a>
-        
     </div>
 </nav>
 
@@ -70,9 +77,30 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         position: absolute;
         bottom: 40%;
         left: 110px;
-        font-size: 36px; /* Increase font size */
-        letter-spacing: 1px; /* Add slight letter spacing for better readability */
-        transform: translateY(8px); /* Adjust vertical position */
+        font-size: 36px;
+        letter-spacing: 1px;
+        transform: translateY(8px);
+    }
+
+    .hamburger {
+        display: none;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute; /* Position it within the navbar */
+        top: 50%; /* Center vertically */
+        right: 20px; /* Align to the right */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        z-index: 1100; /* Ensure it stays above other elements */
+    }
+
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
     }
 
     @media screen and (max-width: 768px) {
@@ -83,6 +111,7 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         }
 
         .navbar-right {
+            display: none;
             flex-direction: column;
             align-items: flex-start;
             gap: 10px;
@@ -97,15 +126,38 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
             text-align: left;
         }
 
+        .navbar-right.active {
+            display: flex;
+        }
+
         .navbar-logo-text {
             position: static;
             margin-left: 10px;
-            font-size: 24px; /* Keep consistent font size on mobile */
+            font-size: 24px;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        .desktop-only {
+            display: none;
+        }
+
+        .mobile-only {
+            display: block;
         }
     }
 </style>
 
 <script>
+    const hamburger = document.getElementById("hamburger");
+    const navbarRight = document.getElementById("navbar-right");
+
+    hamburger.addEventListener("click", () => {
+        navbarRight.classList.toggle("active");
+    });
+
     window.addEventListener("scroll", function () {
         const navbar = document.getElementById("navbar");
         if (window.scrollY > window.innerHeight / 2) {

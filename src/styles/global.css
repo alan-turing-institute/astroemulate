@@ -1,3 +1,10 @@
+/* Ensure all elements respect box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 h3 {
     font-size: 30px;
     line-height: 1.6;
@@ -206,6 +213,9 @@ h3 {
     font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
         "Nimbus Sans", Arial, sans-serif;
     height: 100%;
+    position: relative;
+    overflow: auto;
+    height: auto;
 }
 
 main {
@@ -654,6 +664,14 @@ h3.right-text {
         text-align: center;
     }
 
+    .intro h1 {
+        font-size: 60px;
+    }
+
+    .intro h2 {
+        font-size: 30px;
+    }
+
     .benefit {
         width: 100%;
     }
@@ -691,6 +709,30 @@ h3.right-text {
 
     .quick-start-code {
         font-size: 16px;
+    }
+
+    .blog-cards {
+            grid-template-columns: 1fr;
+            padding: 10px;
+        }
+
+    .blog-card {
+        padding: 16px;
+        width: 95%;
+    }
+
+    .blog-card-title {
+        font-size: 20px;
+    }
+
+    .blog-card-description {
+        font-size: 14px;
+    }
+
+    .blog-card-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 }
 
