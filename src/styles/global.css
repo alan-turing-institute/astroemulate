@@ -710,6 +710,30 @@ h3.right-text {
     .quick-start-code {
         font-size: 16px;
     }
+
+    .blog-cards {
+            grid-template-columns: 1fr;
+            padding: 10px;
+        }
+
+    .blog-card {
+        padding: 16px;
+        width: 95%;
+    }
+
+    .blog-card-title {
+        font-size: 20px;
+    }
+
+    .blog-card-description {
+        font-size: 14px;
+    }
+
+    .blog-card-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
 }
 
 @media screen and (min-width: 1600px) {
