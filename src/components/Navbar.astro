@@ -83,6 +83,11 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         background: none;
         border: none;
         cursor: pointer;
+        position: absolute; /* Position it within the navbar */
+        top: 50%; /* Center vertically */
+        right: 20px; /* Align to the right */
+        transform: translateY(-50%); /* Adjust for vertical centering */
+        z-index: 1100; /* Ensure it stays above other elements */
     }
 
     @media screen and (max-width: 768px) {
