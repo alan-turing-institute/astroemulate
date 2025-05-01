@@ -3,7 +3,7 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
 ---
 
 <nav class="navbar" id="navbar">
-    <a class="homelink" href="/" style="color: inherit; text-decoration: none;">
+    <a class="homelink desktop-only" href="/" style="color: inherit; text-decoration: none;">
         <img src={logo.src} width="100" alt="AutoEmulate Logo" />
         <sub class="navbar-logo-text"><b>utoEmulate</b></sub>
     </a>
@@ -11,6 +11,7 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         ☰
     </button>
     <div class="navbar-right" id="navbar-right">
+        <a class="mobile-only" href="/">Home</a>
         <a
             href="https://alan-turing-institute.github.io/autoemulate/index.html"
             target="_blank">Documentation</a
@@ -90,6 +91,14 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         z-index: 1100; /* Ensure it stays above other elements */
     }
 
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+
     @media screen and (max-width: 768px) {
         .navbar {
             flex-direction: column;
@@ -124,6 +133,14 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         }
 
         .hamburger {
+            display: block;
+        }
+
+        .desktop-only {
+            display: none;
+        }
+
+        .mobile-only {
             display: block;
         }
     }
