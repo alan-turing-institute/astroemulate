@@ -17,8 +17,11 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
     <div class="navbar-right" id="navbar-right">
         <a class="mobile-only" href="/">Home</a>
         <div class="dropdown">
-            <button class="dropbtn">Resources</button>
-            <div class="dropdown-content">
+            <button class="dropbtn" id="resources-btn">
+                Resources
+                <span class="arrow" id="resources-arrow">&#9654;</span>
+            </button>
+            <div class="dropdown-content" id="resources-dropdown">
                 <a
                     href="https://alan-turing-institute.github.io/autoemulate/index.html"
                     target="_blank">Documentation</a
@@ -216,6 +219,16 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
             padding: 10px 0 10px 20px;
         }
     }
+    .arrow {
+        display: inline-block;
+        margin-left: 6px;
+        transition: transform 0.2s;
+        font-size: 0.8em;
+        vertical-align: middle;
+    }
+    .dropdown.open .arrow {
+        transform: rotate(90deg);
+    }
 </style>
 
 <script>
@@ -233,5 +246,24 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         } else {
             navbar.classList.remove("hidden");
         }
+    });
+
+    // Dropdown arrow on hover
+    const resourcesBtn = document.getElementById("resources-btn");
+    const dropdown = resourcesBtn.parentElement;
+
+    resourcesBtn.addEventListener("mouseenter", () => {
+        dropdown.classList.add("open");
+    });
+    resourcesBtn.addEventListener("mouseleave", () => {
+        dropdown.classList.remove("open");
+    });
+    // Also handle hover on dropdown-content so it stays open when moving to links
+    const resourcesDropdown = document.getElementById("resources-dropdown");
+    resourcesDropdown.addEventListener("mouseenter", () => {
+        dropdown.classList.add("open");
+    });
+    resourcesDropdown.addEventListener("mouseleave", () => {
+        dropdown.classList.remove("open");
     });
 </script>
