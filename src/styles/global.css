@@ -768,4 +768,20 @@ h3.right-text {
     height: 18px;
     margin-left: 0.2em;
     vertical-align: middle;
+    /* Remove background and border for plain look */
+    background: none !important;
+    border: none !important;
+    padding: 0 0.3em;
+    color: #111 !important;
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 1.5em;
+    text-align: center;
+}
+
+.github-count-plain {
+    background: none !important;
+    border: none !important;
+    color: #111 !important;
 }
