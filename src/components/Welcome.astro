@@ -15,8 +15,10 @@ import Navbar from "./Navbar.astro";
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"
-    ></script>
+    <script
+        type="text/partytown"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"></script>
     <script type="text/partytown">
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -36,18 +38,74 @@ import Navbar from "./Navbar.astro";
         <div class="intro-section">
             <div class="intro">
                 <h1>Accelerating large-scale simulations with AI.</h1>
-                <h2>Replace complex simulations with fast, accurate emulators.</h2>
+                <h2>
+                    Replace complex simulations with fast, accurate emulators.
+                </h2>
                 <section id="links">
                     <a
                         class="button"
                         href="https://alan-turing-institute.github.io/autoemulate/index.html"
                         target="_blank"
                         >Get started
+                    </a><br /><br /><br /><br />
+                    <a
+                        href="https://github.com/alan-turing-institute/autoemulate"
+                        target="_blank"
+                        class="github-btn"
+                        aria-label="Star on GitHub"
+                    >
+                        <span class="github-btn-label">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="#6a737d"
+                                viewBox="0 0 24 24"
+                                width="20"
+                                height="20"
+                                style="vertical-align: middle;"
+                            >
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                                ></path>
+                            </svg>
+                            Star
+                        </span>
+                        <span class="github-btn-count">
+                            <span
+                                class="github-count github-count-plain"
+                                id="star-count"></span>
+                        </span>
+                    </a>
+                    <a
+                        href="https://github.com/alan-turing-institute/autoemulate/fork"
+                        target="_blank"
+                        class="github-btn"
+                        aria-label="Fork on GitHub"
+                    >
+                        <span class="github-btn-label">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="#6a737d"
+                                viewBox="0 0 24 24"
+                                width="20"
+                                height="20"
+                                style="vertical-align: middle;"
+                            >
+                                <path
+                                    d="M6 3a3 3 0 0 0 0 6c.34 0 .67-.05.98-.15A5.98 5.98 0 0 0 11 13.17V17a3 3 0 1 0 2 0v-3.83a5.98 5.98 0 0 0 4.02-4.32c.31.1.64.15.98.15a3 3 0 1 0-3-3c0 .34.05.67.15.98A3.98 3.98 0 0 1 13 10.83V17a1 1 0 1 1-2 0v-6.17a3.98 3.98 0 0 1-2.15-3.85c.1-.31.15-.64.15-.98a3 3 0 0 0-3-3zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm12 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-6 14a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                ></path>
+                            </svg>
+                            Fork
+                        </span>
+                        <span class="github-btn-count">
+                            <span
+                                class="github-count github-count-plain"
+                                id="fork-count"></span>
+                        </span>
                     </a>
                 </section>
             </div>
         </div>
-        
+
         <div class="about-section">
             <div class="about-section-inner">
                 <div class="hero">
@@ -57,12 +115,14 @@ import Navbar from "./Navbar.astro";
                         </div>
                         <div class="about-text">
                             <h3>
-                                <i>AutoEmulate</i> is a Python library for automatically creating
-                                accurate and efficient emulators of complex simulations.
+                                <i>AutoEmulate</i> is a Python library for automatically
+                                creating accurate and efficient emulators of complex
+                                simulations.
                                 <br /><br />
-                                Run a complete machine learning pipeline to compare and optimise
-                                a wide range of models, with functions for downstream tasks like
-                                prediction, sensitivity analysis and calibration.
+                                Run a complete machine learning pipeline to compare
+                                and optimise a wide range of models, with functions
+                                for downstream tasks like prediction, sensitivity
+                                analysis and calibration.
                             </h3>
                         </div>
                     </div>
@@ -152,7 +212,7 @@ import Navbar from "./Navbar.astro";
                         <Code code={`pip install autoemulate`} lang="python" />
                     </div>
                 </div>
-                
+
                 <!-- Quick Start Card -->
                 <div class="quick-card">
                     <h4>Find the best emulator in just a few lines of code</h4>
@@ -174,4 +234,13 @@ import Navbar from "./Navbar.astro";
             navbar.classList.remove("hidden");
         }
     });
+    // Fetch GitHub repo data and update counts
+    fetch("https://api.github.com/repos/alan-turing-institute/autoemulate")
+        .then((res) => res.json())
+        .then((data) => {
+            document.getElementById("star-count").textContent =
+                data.stargazers_count;
+            document.getElementById("fork-count").textContent =
+                data.forks_count;
+        });
 </script>
