@@ -15,8 +15,10 @@ import Navbar from "./Navbar.astro";
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"
-    ></script>
+    <script
+        type="text/partytown"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-30RQRKFG08"></script>
     <script type="text/partytown">
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -36,18 +38,44 @@ import Navbar from "./Navbar.astro";
         <div class="intro-section">
             <div class="intro">
                 <h1>Accelerating large-scale simulations with AI.</h1>
-                <h2>Replace complex simulations with fast, accurate emulators.</h2>
+                <h2>
+                    Replace complex simulations with fast, accurate emulators.
+                </h2>
                 <section id="links">
                     <a
                         class="button"
                         href="https://alan-turing-institute.github.io/autoemulate/index.html"
                         target="_blank"
                         >Get started
+                    </a><br><br><br>
+                    <a
+                        href="https://github.com/alan-turing-institute/autoemulate"
+                        target="_blank"
+                        style="margin-left: 1rem; vertical-align: middle;"
+                        aria-label="Star on GitHub"
+                    >
+                        <img
+                            src="https://img.shields.io/github/stars/alan-turing-institute/autoemulate?style=social"
+                            alt="GitHub stars"
+                            style="height: 28px; vertical-align: middle;"
+                        />
+                    </a>
+                    <a
+                        href="https://github.com/alan-turing-institute/autoemulate/fork"
+                        target="_blank"
+                        style="margin-left: 0.5rem; vertical-align: middle;"
+                        aria-label="Fork on GitHub"
+                    >
+                        <img
+                            src="https://img.shields.io/github/forks/alan-turing-institute/autoemulate?style=social"
+                            alt="GitHub forks"
+                            style="height: 28px; vertical-align: middle;"
+                        />
                     </a>
                 </section>
             </div>
         </div>
-        
+
         <div class="about-section">
             <div class="about-section-inner">
                 <div class="hero">
@@ -57,12 +85,14 @@ import Navbar from "./Navbar.astro";
                         </div>
                         <div class="about-text">
                             <h3>
-                                <i>AutoEmulate</i> is a Python library for automatically creating
-                                accurate and efficient emulators of complex simulations.
+                                <i>AutoEmulate</i> is a Python library for automatically
+                                creating accurate and efficient emulators of complex
+                                simulations.
                                 <br /><br />
-                                Run a complete machine learning pipeline to compare and optimise
-                                a wide range of models, with functions for downstream tasks like
-                                prediction, sensitivity analysis and calibration.
+                                Run a complete machine learning pipeline to compare
+                                and optimise a wide range of models, with functions
+                                for downstream tasks like prediction, sensitivity
+                                analysis and calibration.
                             </h3>
                         </div>
                     </div>
@@ -152,7 +182,7 @@ import Navbar from "./Navbar.astro";
                         <Code code={`pip install autoemulate`} lang="python" />
                     </div>
                 </div>
-                
+
                 <!-- Quick Start Card -->
                 <div class="quick-card">
                     <h4>Find the best emulator in just a few lines of code</h4>
