@@ -16,23 +16,28 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
     </button>
     <div class="navbar-right" id="navbar-right">
         <a class="mobile-only" href="/">Home</a>
-        <a
-            href="https://alan-turing-institute.github.io/autoemulate/index.html"
-            target="_blank">Documentation</a
-        >
-        <a
-            href="https://joss.theoj.org/papers/10.21105/joss.07626"
-            target="_blank">JOSS Paper</a
-        >
-        <a
-            href="https://github.com/alan-turing-institute/autoemulate"
-            target="_blank">GitHub</a
-        >
+        <div class="dropdown">
+            <button class="dropbtn">Resources</button>
+            <div class="dropdown-content">
+                <a
+                    href="https://alan-turing-institute.github.io/autoemulate/index.html"
+                    target="_blank">Documentation</a
+                >
+                <a
+                    href="https://joss.theoj.org/papers/10.21105/joss.07626"
+                    target="_blank">JOSS Paper</a
+                >
+                <a
+                    href="https://github.com/alan-turing-institute/autoemulate"
+                    target="_blank">GitHub</a
+                >
+                <a
+                    href="https://alan-turing-institute.github.io/gp-demo/"
+                    target="_blank">What is emulation?</a
+                >
+            </div>
+        </div>
         <a href="/team">Who we are</a>
-        <a
-            href="https://alan-turing-institute.github.io/gp-demo/"
-            target="_blank">What is emulation?</a
-        >
         <a href="/blog">Blog</a>
     </div>
 </nav>
@@ -146,6 +151,69 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
 
         .mobile-only {
             display: block;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: black;
+        padding: 0;
+    }
+
+    .dropbtn:hover {
+        color: purple;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        z-index: 1200;
+        flex-direction: column;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: purple;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    @media screen and (max-width: 768px) {
+        .dropdown-content {
+            position: static;
+            box-shadow: none;
+            min-width: 0;
+        }
+        .dropbtn {
+            font-size: 16px;
+            width: 100%;
+            text-align: left;
+            padding: 10px 0;
+        }
+        .dropdown-content a {
+            font-size: 16px;
+            padding: 10px 0 10px 20px;
         }
     }
 </style>
