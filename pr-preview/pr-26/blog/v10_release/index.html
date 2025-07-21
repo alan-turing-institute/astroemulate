@@ -5,32 +5,100 @@ const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=
 Info
 <span class="arrow" id="resources-arrow" data-astro-cid-5blmo7yk>&#9654;</span> </button> <div class="dropdown-content" id="resources-dropdown" data-astro-cid-5blmo7yk> <a href="https://alan-turing-institute.github.io/autoemulate/index.html" target="_blank" data-astro-cid-5blmo7yk>Documentation</a> <a href="https://joss.theoj.org/papers/10.21105/joss.07626" target="_blank" data-astro-cid-5blmo7yk>JOSS Paper</a> <a href="https://github.com/alan-turing-institute/autoemulate" target="_blank" data-astro-cid-5blmo7yk>GitHub</a> <a href="https://pypi.org/project/autoemulate" target="_blank" data-astro-cid-5blmo7yk>PyPI</a> <a href="https://alan-turing-institute.github.io/gp-demo/" target="_blank" data-astro-cid-5blmo7yk>What is emulation?</a> </div> </div> </div> </nav>  <script type="module">const d=document.getElementById("hamburger"),o=document.getElementById("navbar-right");d.addEventListener("click",()=>{o.classList.toggle("active")});window.addEventListener("scroll",function(){const t=document.getElementById("navbar");window.scrollY>window.innerHeight/2?t.classList.add("hidden"):t.classList.remove("hidden")});const n=document.getElementById("resources-btn"),e=n.parentElement;n.addEventListener("mouseenter",()=>{e.classList.add("open")});n.addEventListener("mouseleave",()=>{e.classList.remove("open")});const s=document.getElementById("resources-dropdown");s.addEventListener("mouseenter",()=>{e.classList.add("open")});s.addEventListener("mouseleave",()=>{e.classList.remove("open")});</script> <div class="blog"> <article class="blog-article"> <header class="blog-header"> <h1>AutoEmulate v1.0.0 release</h1> <p class="blog-meta"> <strong>AutoEmulate contributors</strong> - 7/31/2025 </p><br><br> <p class="blog-description">Updates on new features in v1.0.0 release</p>  <br> <br> <p class="blog-release"> <strong>Release:</strong> <a href="https://github.com/alan-turing-institute/autoemulate/releases/tag/v1.0.0"> v1.0.0 </a> </p>  </header> <section class="blog-content">  <div><ul>
 <li><a href="#whats-new">What&#39;s new</a><ul>
-<li><a href="#key-api-changes">Key API changes</a></li>
 <li><a href="#pytorch-refactor-and-package-redesign">PyTorch refactor and package redesign</a></li>
 <li><a href="#a-new-set-of-emulator-models">A new set of Emulator models</a></li>
-<li><a href="#simulator-in-the-loop">Simulator in the loop</a></li>
-<li><a href="#active-learning">Active learning</a></li>
-<li><a href="#uncertainty-quantification">Uncertainty quantification?</a></li>
+<li><a href="#bayesian-model-calibration">Bayesian model calibration</a></li>
+<li><a href="#upgraded-features">Upgraded features</a></li>
+<li><a href="#key-api-changes">Key API changes</a></li>
 </ul>
 </li>
 <li><a href="#whats-next">What&#39;s next</a></li>
 </ul>
 <p>We&#39;re excited to announce the progress on AutoEmulate in this v1.0.0 release -- this release sees the package fully integrated into the PyTorch ecosystem; PyTorch is one of the most popular open-source deep learning frameworks and one of the bedrocks of modern machine learning with Python.</p>
+<p>This release also contains new features, including methods for uncertainty quantification;  ensemble-based emulator models, which output predictions with uncertainty, and Bayesian model calibration, which enables inference of parameters likely to have generated observed data with uncertainty.</p>
 <p><br/><br/>
 If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical Systems, feel free to reach out to us at <a href="mailto:ai4physics@turing.ac.uk">ai4physics@turing.ac.uk</a></p>
 <h2 id="whats-new">What&#39;s new</h2>
-<h3 id="key-api-changes">Key API changes</h3>
 <h3 id="pytorch-refactor-and-package-redesign">PyTorch refactor and package redesign</h3>
 <p>AutoEmulate was originally built on top of the scikit-learn framework, which is a great library for traditional machine learning tasks. However, as we moved towards more complex models and larger datasets, we found that we needed the flexibility and performance that PyTorch provides. The new PyTorch backend allows us to leverage GPU acceleration, making training and inference much faster. The PyTorch focus also allows AutoEmulate to integrate with other tools in the broader ecosystem, enabling end-to-end emulation workflows.</p>
 <h3 id="a-new-set-of-emulator-models">A new set of Emulator models</h3>
+<p>AutoEmulate v1.0.0 includes a new set of Emulator models with a variety of different architectures. Some of these are wrapped implementations from PyTorch, Sklearn and elsewhere, but we also have a number of custom implementations including ensemble models where we quantify uncertainty by looking at the distribution over outputs. The table below summarises the models available in this release:</p>
+<table>
+<thead>
+<tr>
+<th>Emulator</th>
+<th>Implementation</th>
+<th>Backend</th>
+<th>Multi-output support</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GaussianProcessExact</td>
+<td>Custom</td>
+<td>PyTorch</td>
+<td>True</td>
+</tr>
+<tr>
+<td>GaussianProcessExactCorrelated</td>
+<td>Custom</td>
+<td>PyTorch</td>
+<td>True</td>
+</tr>
+<tr>
+<td>LightGBM</td>
+<td>Wrapped</td>
+<td>LightGBM</td>
+<td>False</td>
+</tr>
+<tr>
+<td>SupportVectorMachine</td>
+<td>Wrapped</td>
+<td>Scikit-learn</td>
+<td>True</td>
+</tr>
+<tr>
+<td>RadialBasisFunctions</td>
+<td>Wrapped</td>
+<td>PyTorch</td>
+<td>True</td>
+</tr>
+<tr>
+<td>RandomForest</td>
+<td>Wrapped</td>
+<td>Scikit-learn</td>
+<td>True</td>
+</tr>
+<tr>
+<td>MLP</td>
+<td>Custom</td>
+<td>PyTorch</td>
+<td>True</td>
+</tr>
+<tr>
+<td>EnsembleMLP</td>
+<td>Custom</td>
+<td>PyTorch</td>
+<td>True</td>
+</tr>
+<tr>
+<td>EnsembleMLPDropout</td>
+<td>Custom</td>
+<td>PyTorch</td>
+<td>True</td>
+</tr>
+</tbody></table>
+<h3 id="bayesian-model-calibration">Bayesian model calibration</h3>
+<p>Bayesian calibration estimates the probability distribution over input parameters given observed data, providing uncertainty estimates.
+Performing Bayesian calibration requires a fit emulator that predicts uncertainty (e.g., Gaussian Process) and observations associated with the simulator output. Check out our new <a href="URL">tutorial</a> for more details on how to use this feature.</p>
+<h3 id="upgraded-features">Upgraded features</h3>
 <ul>
-<li>Decision about which models to keep, GPs not CNPs etc</li>
-<li>Ensemble methods</li>
-<li>Table of models? Custom implementation vs PyTorch wrapped vs scikit-learn wrapped?</li>
-<li>Processing techniques</li>
+<li><strong>Simulator in the loop</strong>: Some features in AutoEmulate such as <em>active learning</em> and <em>history matching</em> require the user to provide a simulator that can be run by AutoEmulate. AutoEmulate now supports easy integration of simulators into the emulation workflow. This is achieved through a subclassing mechanism of the <code>Simulator</code> base class, allowing the users to define a method to run their simulation, taking in the input parameters and returning the output variables. See our <a href="URL">custom simulations tutorial</a> for more details.</li>
+<li><strong>Active learning</strong> is now a core feature of AutoEmulate. Active learning intelligently selects informative simulator evaluations to maximize emulator improvement with minimal computational cost. See our <a href="URL">active learning tutorial</a> for more details.</li>
 </ul>
-<h3 id="simulator-in-the-loop">Simulator in the loop</h3>
-<h3 id="active-learning">Active learning</h3>
-<h3 id="uncertainty-quantification">Uncertainty quantification?</h3>
+<h3 id="key-api-changes">Key API changes</h3>
+<p>As with previous releases, AutoEmulate v1.0.0 can be used to quickly get an emulator from simulation inputs (X) and outputs (y). This now happens in a single step:</p>
+<pre><code class="language-python">    ae = AutoEmulate(X, y)
+</code></pre>
+<p>This replaces the previous two-step process of <code>ae.setup(X, y)</code> and <code>ae.compare()</code>. Check out the <a href="URL">Quick Start Guide</a> for more details on how to use the new API.</p>
 <h2 id="whats-next">What&#39;s next</h2>
 </div>  </section> </article> </div> </main> <script type="module">window.addEventListener("scroll",function(){const n=document.getElementById("navbar");window.scrollY>window.innerHeight/2?n.classList.add("hidden"):n.classList.remove("hidden")});</script> </div>
