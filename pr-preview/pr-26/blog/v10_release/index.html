@@ -96,6 +96,7 @@ Performing Bayesian calibration requires a fit emulator and observations associa
 <ul>
 <li><strong>Simulator in the loop</strong>: Some features in AutoEmulate such as <em>active learning</em> and <em>history matching</em> require the user to provide a simulator that can be run by AutoEmulate. AutoEmulate now supports easy integration of simulators into the emulation workflow. This is achieved through a subclassing mechanism of the <em>Simulator</em> base class, allowing the users to define a method to run their simulation, taking in the input parameters and returning the output variables. See our <a href="URL">custom simulations tutorial</a> for more details.</li>
 <li><strong>Active learning</strong> is now a core feature of AutoEmulate. Active learning intelligently selects informative simulator evaluations to maximize emulator improvement with minimal computational cost. See our <a href="URL">active learning tutorial</a> for more details.</li>
+<li><strong>History matching</strong> <em>TODO: explain changes</em>. See our two updated history matching tutorials <a href="URL">1</a> and <a href="URL">2</a> for more details.</li>
 </ul>
 <h3 id="key-api-changes">Key API changes</h3>
 <p>As with previous releases, AutoEmulate v1.0.0 can be used to quickly get an emulator from simulation inputs (X) and outputs (y). This now happens in a single step:</p>
