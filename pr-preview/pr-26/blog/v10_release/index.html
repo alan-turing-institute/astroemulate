@@ -24,13 +24,12 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 <h3 id="pytorch-refactor-and-package-redesign">PyTorch refactor and package redesign</h3>
 <p>AutoEmulate was originally built on top of the scikit-learn framework, which is a great library for traditional machine learning tasks. However, as we moved towards more complex models and larger datasets, we found that we needed the flexibility and performance that PyTorch provides. The new PyTorch backend allows us to leverage GPU acceleration, making training and inference much faster. The PyTorch focus also allows AutoEmulate to integrate with other tools in the broader ecosystem, enabling end-to-end emulation workflows.</p>
 <h3 id="a-new-set-of-emulator-models">A new set of Emulator models</h3>
-<p>AutoEmulate v1.0.0 includes a new set of Emulator models with a variety of different architectures. Some of these are wrapped implementations from PyTorch, scikit-learn and elsewhere, but we also have a number of custom implementations including ensemble models where we quantify uncertainty by looking at the distribution over outputs. The table below summarises the emulators available in this release are implemented in PyTorch, whether they have probabilistic outputs (Prob.), support multi-output emulation (Multi.), use auto-differentiation (AD) for training, or support uncertainty quantification (UQ).</p>
+<p>AutoEmulate v1.0.0 includes a new set of Emulator models with a variety of different architectures. Some of these are wrapped implementations from PyTorch, scikit-learn and elsewhere, but we also have a number of custom implementations including ensemble models where we quantify uncertainty by looking at the distribution over outputs. The table below summarises the emulators available in this release are implemented in PyTorch, support multi-output emulation (Multi.), use auto-differentiation (AD) for training, or support uncertainty quantification (UQ).</p>
 <table>
 <thead>
 <tr>
 <th>Emulator</th>
 <th>PyTorch</th>
-<th>Prob.</th>
 <th>Multi.</th>
 <th>AD</th>
 <th>UQ</th>
@@ -42,11 +41,9 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
-<td>✔️</td>
 </tr>
 <tr>
 <td>GaussianProcessExactCorrelated</td>
-<td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -55,14 +52,12 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 <tr>
 <td>MLP</td>
 <td>✔️</td>
-<td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>❌</td>
 </tr>
 <tr>
 <td>EnsembleMLP</td>
-<td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
@@ -74,12 +69,10 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 <td>✔️</td>
 <td>✔️</td>
 <td>✔️</td>
-<td>✔️</td>
 </tr>
 <tr>
 <td>PolynomialRegression</td>
 <td>✔️</td>
-<td>❌</td>
 <td>✔️</td>
 <td>✔️</td>
 <td>❌</td>
@@ -87,7 +80,6 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 <tr>
 <td>RadialBasisFunctions</td>
 <td>✔️</td>
-<td>❌</td>
 <td>✔️</td>
 <td>❌</td>
 <td>❌</td>
@@ -98,12 +90,10 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
 </tr>
 <tr>
 <td>RandomForest</td>
 <td>scikit-learn</td>
-<td>❌</td>
 <td>✔️</td>
 <td>❌</td>
 <td>❌</td>
@@ -111,7 +101,6 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 <tr>
 <td>LightGBM</td>
 <td>LightGBM</td>
-<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
