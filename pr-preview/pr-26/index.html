@@ -35,16 +35,18 @@ Data-processing, model comparison, cross-validation,
 All emulators are compatible with commonly used Python
                         ML frameworks, making them easy to integrate into
                         downstream applications.
-</p> </div> </div> </div> <div class="emulators-section"> <div class="seondary-intro"> <h1>State of the art emulators</h1> </div> <div class="panel-left benefits"> <div class="benefit"> <img src="/_astro/classical.fBAKKo8r.png" alt="Classical Icon" width="70"> <h3>Classical</h3> <p>
+</p> </div> </div> </div> <div class="emulators-section"> <div class="seondary-intro"> <h1>State of the art emulation</h1> </div> <div class="panel-left benefits"> <div class="benefit"> <img src="/_astro/classical.fBAKKo8r.png" alt="Classical Icon" width="70"> <h3>Classical methods</h3> <p>
 Radial Basis Functions<br>
-Second Order Polynomials
-</p> </div> <div class="benefit"> <img src="/_astro/ml.CWF71K5G.svg" alt="ML Icon" width="70"> <h3>Machine Learning</h3> <p>
+Polynomial Regression
+</p> </div> <div class="benefit"> <img src="/_astro/dl.fZWAvDCz.svg" alt="DL Icon" width="70"> <h3>Machine Learning</h3> <p>
 Random Forests<br>
 Gradient Boosting<br>
-Support Vector Machines
-</p> </div> <div class="benefit"> <img src="/_astro/dl.fZWAvDCz.svg" alt="DL Icon" width="70"> <h3>Deep Learning</h3> <p>
+Support Vector Machines<br>
+Neural Networks
+</p> </div> <div class="benefit"> <img src="/_astro/ml.CWF71K5G.svg" alt="ML Icon" width="70"> <h3>Probabilistic methods</h3> <p>
 Gaussian Processes<br>
-Conditional Neural Processes
+Ensemble methods<br>
+Uncertainty Quantification
 </p> </div> </div> </div> <!-- Quick start section with existing styling --> <div class="quick-section-container"> <h2 class="quick-section-title">Quick start</h2> <div class="quick-cards-wrapper"> <!-- Quick Install Card --> <div class="quick-card"> <h4>Install</h4> <div class="code-block"> <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#E1E4E8">pip install autoemulate</span></span></code></pre> </div> </div> <!-- Quick Start Card --> <div class="quick-card"> <h4>Find the best emulator in just a few lines of code</h4> <div class="quick-start-code"> <pre class="astro-code everforest-light" style="background-color:#fdf6e3;color:#5c6a72; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#5C6A72">    ae </span><span style="color:#F57D26">=</span><span style="color:#8DA101"> AutoEmulate</span><span style="color:#5C6A72">(X, y)</span></span>
 <span class="line"><span style="color:#5C6A72">    best_result </span><span style="color:#F57D26">=</span><span style="color:#5C6A72"> ae</span><span style="color:#939F91">.</span><span style="color:#8DA101">best_result</span><span style="color:#5C6A72">()</span></span>
 <span class="line"><span style="color:#5C6A72">    best_emulator </span><span style="color:#F57D26">=</span><span style="color:#5C6A72"> best_result</span><span style="color:#939F91">.</span><span style="color:#5C6A72">model</span></span></code></pre>
