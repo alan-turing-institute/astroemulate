@@ -6,7 +6,7 @@ import ml from "../assets/ml.svg";
 import dl from "../assets/dl.svg";
 import code from "../assets/code.svg";
 import domain from "../assets/domain.svg";
-import integration from "../assets/integration.svg";
+import pytorch from "../assets/pytorch.png";
 import "../styles/global.css";
 import { Code } from "astro:components";
 import { Content as QuickStartCode } from "./quick-start-code.md";
@@ -144,6 +144,13 @@ import Navbar from "./Navbar.astro";
                     </p>
                 </div>
                 <div class="benefit">
+                    <img src={pytorch.src} alt="PyTorch Icon" width="70" />
+                    <h3>PyTorch first</h3>
+                    <p>
+                        PyTorch backend makes emulators easy to integrate into downstream applications.
+                    </p>
+                </div>
+                <div class="benefit">
                     <img
                         src={domain.src}
                         alt="Domain Agnostic Icon"
@@ -151,19 +158,6 @@ import Navbar from "./Navbar.astro";
                     />
                     <h3>Domain agnostic</h3>
                     <p>Can be applied to simulation models from any domain.</p>
-                </div>
-                <div class="benefit">
-                    <img
-                        src={integration.src}
-                        alt="Easy Integration Icon"
-                        width="70"
-                    />
-                    <h3>Easy Integration</h3>
-                    <p>
-                        All emulators are compatible with commonly used Python
-                        ML frameworks, making them easy to integrate into
-                        downstream applications.
-                    </p>
                 </div>
             </div>
         </div>
