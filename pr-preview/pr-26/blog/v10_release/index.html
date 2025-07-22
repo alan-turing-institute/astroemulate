@@ -90,8 +90,8 @@ If you&#39;d like to discuss any of our work on AutoEmulate or AI for Physical S
 </tr>
 </tbody></table>
 <h3 id="bayesian-model-calibration">Bayesian model calibration</h3>
-<p>Bayesian calibration estimates the probability distribution over input parameters given observed data, providing uncertainty estimates.
-Performing Bayesian calibration requires a fit emulator that predicts uncertainty (e.g., Gaussian Process) and observations associated with the simulator output. Check out our new <a href="URL">tutorial</a> for more details on how to use this feature.</p>
+<p>Bayesian calibration is a method for estimating which input parameters were most likely to produce observed data. An advantage over other calibration methods is that it returns a probability distribution over the input parameters rather than just point estimates.
+Performing Bayesian calibration requires a fit emulator and observations associated with the simulator output. Check out our new <a href="URL">tutorial</a> for more details on how to use this feature.</p>
 <h3 id="upgraded-features">Upgraded features</h3>
 <ul>
 <li><strong>Simulator in the loop</strong>: Some features in AutoEmulate such as <em>active learning</em> and <em>history matching</em> require the user to provide a simulator that can be run by AutoEmulate. AutoEmulate now supports easy integration of simulators into the emulation workflow. This is achieved through a subclassing mechanism of the <em>Simulator</em> base class, allowing the users to define a method to run their simulation, taking in the input parameters and returning the output variables. See our <a href="URL">custom simulations tutorial</a> for more details.</li>
