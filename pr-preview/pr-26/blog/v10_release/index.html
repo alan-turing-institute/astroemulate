@@ -117,7 +117,7 @@ Performing Bayesian calibration requires a fit emulator and observations associa
 </ul>
 <h3 id="key-api-changes">Key API changes</h3>
 <p>As with previous releases, AutoEmulate v1.0.0 can be used to quickly get an emulator from simulation inputs (x) and outputs (y). This now happens in a single step:</p>
-<pre><code class="language-python">ae = AutoEmulate(X, y)
+<pre><code class="language-python">ae = AutoEmulate(x, y)
 </code></pre>
 <p>This replaces the previous two-step process of <code>ae.setup(X, y)</code> and <code>ae.compare()</code>. Check out the <a href="URL">Quick Start Guide</a> for more details on how to use the new API.</p>
 <h2 id="whats-next">What&#39;s next</h2>
