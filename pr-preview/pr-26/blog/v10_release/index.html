@@ -31,7 +31,9 @@ The new PyTorch backend allows AutoEmulate to take advantage of PyTorch&#39;s po
 <li>Seamlessly integrating AutoEmulate with other tools in the broader ecosystem, enabling end-to-end emulation workflows.</li>
 </ul>
 <h3 id="a-new-set-of-emulator-models">A new set of Emulator models</h3>
-<p>AutoEmulate v1.0.0 includes a new set of Emulator models with a variety of different architectures. Some of these are wrapped implementations from PyTorch, scikit-learn and elsewhere, but we also have a number of custom implementations including ensemble models where we quantify uncertainty by looking at the distribution over outputs. The table below summarises which emulators available in this release are implemented in PyTorch, support multi-output emulation (MO), use auto-differentiation (AD) for training, or support uncertainty quantification (UQ).</p>
+<p>AutoEmulate v1.0.0 includes a new set of Emulator models with a variety of different architectures, built on top of PyTorch (and GPyTorch for Gaussian processes). Many of these are custom implementations built by the AutoEmulate team, including ensemble models where we quantify uncertainty by looking at the distribution over outputs, but some are simply wrapped PyTorch functions.
+<br/>
+Additionally, we have retained support for several non-PyTorch models that our usersbase has found useful. The table below summarises which emulators available in this release are implemented in PyTorch, support multi-output emulation (MO), use auto-differentiation (AD) for training, or support uncertainty quantification (UQ).</p>
 <table>
 <thead>
 <tr>
