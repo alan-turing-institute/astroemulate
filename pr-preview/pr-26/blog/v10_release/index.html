@@ -9,7 +9,6 @@ Info
 <li><a href="#a-new-set-of-emulator-models">A new set of Emulator models</a></li>
 <li><a href="#bayesian-model-calibration">Bayesian model calibration</a></li>
 <li><a href="#upgraded-features">Upgraded features</a></li>
-<li><a href="#key-api-changes">Key API changes</a></li>
 </ul>
 </li>
 <li><a href="#whats-next">What&#39;s next</a></li>
@@ -126,11 +125,6 @@ Performing Bayesian calibration requires a fit emulator and observations associa
 <li><strong>Active learning</strong> is now a core feature of AutoEmulate. Active learning intelligently selects informative simulator evaluations to maximize emulator improvement with minimal computational cost. See our <a href="URL">active learning tutorial</a> for more details.</li>
 <li><strong>History matching</strong> We have refactored the history matching implementation into two separate classes so that it can be used as a standalone metric to evaluate emulator predictions with as well as in a simulator in the loop workflow. See our two updated history matching tutorials <a href="URL">1</a> and <a href="URL">2</a> for more details.</li>
 </ul>
-<h3 id="key-api-changes">Key API changes</h3>
-<p>As with previous releases, AutoEmulate v1.0.0 can be used to quickly get an emulator from simulation inputs (x) and outputs (y). This now happens in a single step:</p>
-<pre><code class="language-python">ae = AutoEmulate(x, y)
-</code></pre>
-<p>This replaces the previous two-step process of <code>ae.setup(x, y)</code> and <code>ae.compare()</code>. Check out the <a href="URL">Quick Start Guide</a> for more details on how to use the new API.</p>
 <h2 id="whats-next">What&#39;s next</h2>
 <p>Looking ahead, we are working on providing support for more complex simulation outputs including spatial and temporal data, which will allow a wider range of applications to benefit from AutoEmulate.</p>
 </div>  </section> </article> </div> </main> <script type="module">window.addEventListener("scroll",function(){const n=document.getElementById("navbar");window.scrollY>window.innerHeight/2?n.classList.add("hidden"):n.classList.remove("hidden")});</script> </div>
