@@ -12,6 +12,13 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Use preview config for GitHub Pages
+        run: |
+          # Replace the main config with the preview config for this build
+          ls -la astro.config.*
+          mv astro.config.mjs astro.config.main.mjs
+          mv astro.config.preview.mjs astro.config.mjs
+          echo "Using preview config for GitHub Pages deployment"
       - name: Install, build, and upload your site
         uses: withastro/action@v3
       - name: pwd
