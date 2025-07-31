@@ -6,7 +6,7 @@ import ml from "../assets/ml.svg";
 import dl from "../assets/dl.svg";
 import code from "../assets/code.svg";
 import domain from "../assets/domain.svg";
-import integration from "../assets/integration.svg";
+import pytorch from "../assets/pytorch_bw.svg";
 import "../styles/global.css";
 import { Code } from "astro:components";
 import { Content as QuickStartCode } from "./quick-start-code.md";
@@ -144,25 +144,21 @@ import Navbar from "./Navbar.astro";
                     </p>
                 </div>
                 <div class="benefit">
+                    <img src={pytorch.src} alt="PyTorch Icon" width="70" />
+                    <h3>PyTorch first</h3>
+                    <p>
+                        PyTorch backend makes emulators easy to integrate into downstream applications.
+                    </p>
+                </div>
+                <div class="benefit">
                     <img
                         src={domain.src}
                         alt="Domain Agnostic Icon"
                         width="70"
                     />
                     <h3>Domain agnostic</h3>
-                    <p>Can be applied to simulation models from any domain.</p>
-                </div>
-                <div class="benefit">
-                    <img
-                        src={integration.src}
-                        alt="Easy Integration Icon"
-                        width="70"
-                    />
-                    <h3>Easy Integration</h3>
                     <p>
-                        All emulators are compatible with commonly used Python
-                        ML frameworks, making them easy to integrate into
-                        downstream applications.
+                        Integrate complex simulator models from any domain into the simulator-in-the-loop workflow and leverage active learning.
                     </p>
                 </div>
             </div>
@@ -170,32 +166,33 @@ import Navbar from "./Navbar.astro";
 
         <div class="emulators-section">
             <div class="seondary-intro">
-                <h1>State of the art emulators</h1>
+                <h1>State of the art emulation</h1>
             </div>
             <div class="panel-left benefits">
                 <div class="benefit">
                     <img src={classical.src} alt="Classical Icon" width="70" />
-                    <h3>Classical</h3>
+                    <h3>Classical methods</h3>
                     <p>
                         Radial Basis Functions<br />
-                        Second Order Polynomials
-                    </p>
-                </div>
-                <div class="benefit">
-                    <img src={ml.src} alt="ML Icon" width="70" />
-                    <h3>Machine Learning</h3>
-                    <p>
-                        Random Forests<br />
-                        Gradient Boosting<br />
-                        Support Vector Machines
+                        Polynomial Regression
                     </p>
                 </div>
                 <div class="benefit">
                     <img src={dl.src} alt="DL Icon" width="70" />
-                    <h3>Deep Learning</h3>
+                    <h3>Machine Learning</h3>
+                    <p>
+                        Random Forests<br />
+                        Gradient Boosting<br />
+                        Support Vector Machines<br />
+                        Neural Networks
+                    </p>
+                </div>
+                <div class="benefit">
+                    <img src={ml.src} alt="ML Icon" width="70" />
+                    <h3>Probabilistic methods</h3>
                     <p>
                         Gaussian Processes<br />
-                        Conditional Neural Processes
+                        Ensembles<br />
                     </p>
                 </div>
             </div>
