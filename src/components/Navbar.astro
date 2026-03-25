@@ -1,15 +1,16 @@
 ---
-import logo from "../assets/autoemulate_logo_no_grid.png";
+import logo from "../assets/AE_blank.png";
 ---
 
 <nav class="navbar" id="navbar">
     <a
         class="homelink desktop-only"
         href="/"
-        style="color: inherit; text-decoration: none;"
+        style="color: inherit; text-decoration: none; display: flex; align-items: center;"
     >
-        <img src={logo.src} width="100" alt="AutoEmulate Logo" />
-        <sub class="navbar-logo-text"><b>utoEmulate</b></sub>
+        <span class="navbar-logo-text"><b>Auto</b></span>
+        <img src={logo.src} class="navbar-logo-image" alt="E" />
+        <span class="navbar-logo-text"><b>mulate</b></span>
     </a>
     <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         &#9776;
@@ -86,12 +87,14 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
     }
 
     .navbar-logo-text {
-        position: absolute;
-        bottom: 40%;
-        left: 110px;
         font-size: 36px;
         letter-spacing: 1px;
-        transform: translateY(8px);
+    }
+
+    .navbar-logo-image {
+        height: 36px;
+        margin: 0 2px;
+        vertical-align: middle;
     }
 
     .hamburger {
@@ -143,9 +146,11 @@ import logo from "../assets/autoemulate_logo_no_grid.png";
         }
 
         .navbar-logo-text {
-            position: static;
-            margin-left: 10px;
             font-size: 24px;
+        }
+
+        .navbar-logo-image {
+            height: 24px;        
         }
 
         .hamburger {
